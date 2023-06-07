@@ -5,7 +5,6 @@ import { AuthContext } from "../../providers/AuthProvider";
 import { Link, useNavigate } from "react-router-dom";
 // import Swal from 'sweetalert2';
 import GoogleLogin from '../Shared/GoogleLogin/GoogleLogin';
-import { useState } from "react";
 
 const SignUp = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
@@ -25,7 +24,7 @@ const SignUp = () => {
                 updateUserProfile(data.name, data.photoURL)
                     .then(() => {
                         // const saveUser = { name: data.name, email: data.email }
-                        // fetch('https://bistro-boss-server-fawn.vercel.app/users', {
+                        // fetch('https://http://localhost:5000/users', {
                         //     method: 'POST',
                         //     headers: {
                         //         'content-type': 'application/json'
@@ -61,7 +60,7 @@ const SignUp = () => {
             <Helmet>
                 <title>Sparkle Sports School | Sign Up</title>
             </Helmet>
-            <div className="hero min-h-screen  mt-6">
+            <div className="hero min-h-screen  mt-2 mb-6">
                 <div className="hero-content flex flex-col">
                     <div className="text-center ">
                         <h1 className="text-5xl font-bold">Sign up now!</h1>

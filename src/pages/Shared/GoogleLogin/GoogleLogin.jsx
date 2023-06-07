@@ -32,7 +32,7 @@ const GoogleLogin = () => {
     return (
         <div>
             <button onClick={handleGoogleSignIn}>
-                 <img className='rounded-xl bg-none mb-5' src={gogle} alt="" />
+                 <img className='rounded-xl bg-none mb-5 w-80 ms-8' src={gogle} alt="" />
             </button>
         </div>
     );
