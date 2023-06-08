@@ -6,6 +6,11 @@ import Root from '../Layout/Root'
 import ErrorPage from "../pages/Shared/ErrorPage/ErrorPage";
 import SignUp from "../pages/SignUP/SignUP";
 import Login from '../pages/Login/Login';
+import Classes from "../pages/Classes/Classes";
+import MyCart from "../pages/Dashboard/MyCart/MyCart";
+import Dashboard from "../Layout/Dashboard";
+import UserHome from "../pages/Dashboard/UserHome/UserHome";
+import MyClasses from "../pages/Dashboard/MyClasses/MyClasses";
 
 
 
@@ -23,57 +28,54 @@ export const router = createBrowserRouter([
           path: 'signup', 
           element: <SignUp></SignUp> 
         },
-        // {
-        //   path: 'order/:category',
-        //   element: <Order></Order>
-        // },
+        {
+          path: 'classes',
+          element: <Classes></Classes>,
+          loader: () => fetch('http://localhost:5000/classes')
+        },
         {
           path: 'login',
           element:<Login></Login>
-        },
-        // {
-        //   path: 'signup',
-        //   element: <SignUp></SignUp>
-        // },
-        // {
-        //   path: 'secret',
-        //   element: <PrivateRoute><Secret></Secret></PrivateRoute>
-        // }
+        }
       ]
     },
-    // {
-    //   path: 'dashboard',
-    //   element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>, 
-    //   children: [
-    //     {
-    //       path: 'userhome',
-    //       element: <UserHome></UserHome>
-    //     },
-    //     {
-    //       path: 'mycart', 
-    //       element: <MyCart></MyCart>
-    //     },
-    //     {
-    //       path:'payment',
-    //       element: <Payment></Payment>
-    //     },
-    //     // admin routes
-    //     {
-    //       path: 'adminhome',
-    //       element: <AdminRoute><AdminHome></AdminHome></AdminRoute>
-    //     },
-    //     {
-    //       path: 'allusers', 
-    //       element: <AdminRoute><AllUsers></AllUsers></AdminRoute>
-    //     },
-    //     {
-    //       path: 'addItem',
-    //       element: <AdminRoute><AddItem></AddItem></AdminRoute>
-    //     },
-    //     {
-    //       path: 'manageitems',
-    //       element: <AdminRoute><ManageItems></ManageItems></AdminRoute>
-    //     }
-    //   ]
-    // }
+    {
+      path: 'dashboard',
+      element: <Dashboard></Dashboard>, 
+      children: [
+        {
+          path: 'mycart',
+          element: <MyCart></MyCart>
+        },
+        {
+          path: 'userhome',
+          element: <UserHome></UserHome>
+        },
+        {
+          path: 'myclasses', 
+          element: <MyClasses></MyClasses>
+        },
+        // {
+        //   path:'payment',
+        //   element: <Payment></Payment>
+        // },
+        // // admin routes
+        // {
+        //   path: 'adminhome',
+        //   element: <AdminRoute><AdminHome></AdminHome></AdminRoute>
+        // },
+        // {
+        //   path: 'allusers', 
+        //   element: <AdminRoute><AllUsers></AllUsers></AdminRoute>
+        // },
+        // {
+        //   path: 'addItem',
+        //   element: <AdminRoute><AddItem></AddItem></AdminRoute>
+        // },
+        // {
+        //   path: 'manageitems',
+        //   element: <AdminRoute><ManageItems></ManageItems></AdminRoute>
+        // }
+      ]
+    }
   ]);
