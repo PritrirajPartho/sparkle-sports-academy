@@ -3,11 +3,11 @@ import { FaBook, FaCalendarAlt, FaElementor, FaHome, FaShoppingCart, FaUserAlt, 
 import { NavLink, Outlet } from 'react-router-dom';
 
 const Dashboard = () => {
-    const isAdmin = false;
+    const isAdmin = true;
     const isInstructor = false;
     return (
         <div>
-        <div className="drawer lg:drawer-open bg-white">
+        <div className="drawer lg:drawer-open">
                 <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
                 <div className="drawer-content flex flex-col items-center justify-center ">
                     {/* Page content here */}
@@ -24,7 +24,7 @@ const Dashboard = () => {
                                 <li><NavLink to="/dashboard/addItem"> <FaUtensils></FaUtensils> Add an Item</NavLink></li>
                                 <li><NavLink to="/dashboard/manageitems"><FaWallet></FaWallet> Manage Items</NavLink></li>
                                 <li><NavLink to="/"><FaBook></FaBook> Manage Bookings(not implemented)</NavLink></li>
-                                <li><NavLink to="/dashboard/allusers"><FaUsers></FaUsers> All Users</NavLink></li>
+                                <li><NavLink to="/dashboard/manageusers"><FaUsers></FaUsers> Manage Users</NavLink></li>
                                 
                             </>
                              : 

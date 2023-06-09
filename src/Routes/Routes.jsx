@@ -11,6 +11,7 @@ import MyCart from "../pages/Dashboard/MyCart/MyCart";
 import Dashboard from "../Layout/Dashboard";
 import UserHome from "../pages/Dashboard/UserHome/UserHome";
 import MyClasses from "../pages/Dashboard/MyClasses/MyClasses";
+import MangeUsers from "../pages/MangeUsers/MangeUsers";
 
 
 
@@ -30,8 +31,7 @@ export const router = createBrowserRouter([
         },
         {
           path: 'classes',
-          element: <Classes></Classes>,
-          loader: () => fetch('http://localhost:5000/classes')
+          element: <Classes></Classes>
         },
         {
           path: 'login',
@@ -54,6 +54,10 @@ export const router = createBrowserRouter([
         {
           path: 'myclasses', 
           element: <MyClasses></MyClasses>
+        },
+        {
+          path: 'manageusers', 
+          element: <MangeUsers></MangeUsers>
         },
         // {
         //   path:'payment',
