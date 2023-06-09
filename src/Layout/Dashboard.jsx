@@ -7,7 +7,7 @@ import useInstructor from '../hooks/useInstructor';
 const Dashboard = () => {
     const [isAdmin] = useAdmin();
     const[isInstructor] = useInstructor();
-    // const isInstructor = false;
+    // const isInstructor = true;
     return (
         <div>
         <div className="drawer lg:drawer-open">
@@ -38,7 +38,7 @@ const Dashboard = () => {
                                     <li><NavLink to="/dashboard/adminhome"><FaHome></FaHome> Instructor Home</NavLink></li>
                                     <li><NavLink to="/dashboard/addItem"> <FaUtensils></FaUtensils> Add an Item</NavLink></li>
                                     <li><NavLink to="/dashboard/manageitems"><FaWallet></FaWallet> Manage Items</NavLink></li>
-                                    <li><NavLink to="/"><FaBook></FaBook> Manage Bookings(not implemented)</NavLink></li>
+                                    <li><NavLink to="/"><FaBook></FaBook> Manage Class By Ins</NavLink></li>
                                     <li><NavLink to="/dashboard/allusers"><FaUsers></FaUsers> All Users</NavLink></li>
                                 </>
                                 :
