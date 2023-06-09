@@ -2,8 +2,10 @@ import { useContext } from "react";
 import { FaShoppingCart } from 'react-icons/fa';
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProvider";
+import useBooked from "../../../hooks/useBooked";
 
 const NavBar = () => {
+    const[booked] = useBooked();
     const { user, logOut } = useContext(AuthContext);
     const isAdmin = true;
     const handleLogOut = () => {
@@ -17,18 +19,15 @@ const NavBar = () => {
         <li><Link to="/instructors">Instructors</Link></li>
         <li><Link to="/classes">Classes</Link></li>
         <li><Link to="/signup">Signup</Link></li>
+        <li>
+            <button className="btn">
+               <div className="badge badge-secondary">+{booked?.length || 0}</div>
+            </button>
+        </li>
         {
             isAdmin ? <li><Link to="/dashboard">Dashboard</Link></li> : 
             <li><Link to="/dashboard/userhome">Dashboard</Link></li>
         }
-        <li>
-            <Link to="/dashboard/mycart">
-                <button className="btn gap-2">
-                    <FaShoppingCart></FaShoppingCart>
-                    <div className="badge badge-secondary">+99</div>
-                </button>
-            </Link>
-        </li>
         {
             user ? <>
                 <button onClick={handleLogOut} className="btn btn-ghost">LogOut</button>
