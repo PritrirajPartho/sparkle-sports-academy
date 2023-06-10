@@ -54,7 +54,7 @@ const MangeUsers = () => {
 
 
     return (
-        <div className="w-max  ml-60 text-center bg-slate-300">
+        <div className="w-full   ml-60 text-center bg-slate-300">
             <Helmet>
                 <title>Sparkle Sports School | All users</title>
             </Helmet>
@@ -82,7 +82,7 @@ const MangeUsers = () => {
                                 </td>
                                 <td>
                                    {user.role === 'instructor'? 'Instructor':
-                                   <button onClick={() => handleMakeInstructor(user)} className="btn btn-ghost bg-green-400  text-white"><FaChalkboardTeacher></FaChalkboardTeacher></button>
+                                     <button onClick={() => handleMakeInstructor(user)} className="btn btn-ghost bg-green-400  text-white"><FaChalkboardTeacher></FaChalkboardTeacher></button>
                                    }
                                 </td>
                             </tr>)

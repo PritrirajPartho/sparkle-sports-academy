@@ -2,24 +2,22 @@ import React, { useContext, useEffect, useState } from 'react';
 // const axios = require('axios');
 import axios from 'axios';
 import { AuthContext } from '../../providers/AuthProvider';
-import useBooked from '../../hooks/useBooked';
 import Swal from 'sweetalert2';
 
 const Classes = () => {
-  const{user} = useContext(AuthContext)
-  const[,refetch] = useBooked();
+    const{user} = useContext(AuthContext)
     const[classes, setClasses]  =  useState([]);
     useEffect( () =>{
-        axios.get('http://localhost:5000/classes')
+        axios.get('http://localhost:5000/classes?status=approved')
         .then(res => setClasses(res.data))
         .catch(err =>{
             console.log(err)
         })
     },[])
     // console.log(classes)
+    // TODO: SELECT BTN AND BACKGROUND RED WORK
 
     const handleAddToCart = claass => {
-      console.log(claass);
       if(user && user.email){
           const bookedItem = {itemId: claass._id, name: claass.name, img: claass.img, price: claass.price, email: user.email}
           fetch('http://localhost:5000/bookeds', {
@@ -32,7 +30,7 @@ const Classes = () => {
           .then(res => res.json())
           .then(data => {
               if(data.insertedId){
-                  refetch(); // refetch cart to update the number of items in the cart
+                  refetch(); 
                   Swal.fire({
                       position: 'top-end',
                       icon: 'success',
@@ -44,17 +42,28 @@ const Classes = () => {
           })
       }
     }
+
     return (
-        <div className='flex'>
+        <div className='grid grid-cols-3 mt-16 mb-12 gap-8'>
           {
             classes.map(claass =>
-             < >
-              <div key={claass._id} className=' border-2 border-red-400  w-64 m-12 p-12'>
-                  <h1>{claass.name}</h1>
-                  <h3>{claass.instructor}</h3>
-                  <button onClick={() => handleAddToCart(claass)} className='btn btn-primary'>Select</button>
-              </div> 
-            </>)
+             <>
+                <div key={claass._id}   className="card w-96 bg-base-100 shadow-xl">
+                    <figure className="px-10 pt-10">
+                      <img src={claass.img} alt="Shoes" className="rounded-xl" />
+                    </figure>
+                    <div className="card-body items-center text-center">
+                      <h2 className="card-title text-primary text-2xl">{claass.name}</h2>
+                      <h4><span className='mr-2'>Instructor:</span>{claass.instructor}</h4>
+                      <h4><span className='mr-2'>Available Seats:</span>{claass.seat}</h4>
+                      <h4><span className='mr-2'> Price:</span>${claass.price}</h4>
+                      <div className="w-80">
+                         <button onClick={() => handleAddToCart(claass)} className='btn btn-primary w-full'>Select</button>
+                      </div>
+                    </div>
+                 </div>
+             </>
+            )
           }
         </div>
     );
