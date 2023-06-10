@@ -7,13 +7,13 @@ import ErrorPage from "../pages/Shared/ErrorPage/ErrorPage";
 import SignUp from "../pages/SignUP/SignUP";
 import Login from '../pages/Login/Login';
 import Classes from "../pages/Classes/Classes";
-import MyCart from "../pages/Dashboard/MyCart/MyCart";
 import Dashboard from "../Layout/Dashboard";
 import UserHome from "../pages/Dashboard/UserHome/UserHome";
 import MyClasses from "../pages/Dashboard/MyClasses/MyClasses";
 import MangeUsers from "../pages/MangeUsers/MangeUsers";
 import AdminRoute from './AdminRoute';
 import AddClass from "../pages/Dashboard/AddClass/AddClass";
+import MySelectedClass from "../pages/Dashboard/MySelectedClass/MySelectedClass";
 
 
 
@@ -46,10 +46,6 @@ export const router = createBrowserRouter([
       element: <Dashboard></Dashboard>, 
       children: [
         {
-          path: 'mycart',
-          element: <MyCart></MyCart>
-        },
-        {
           path: 'userhome',
           element: <UserHome></UserHome>
         },
@@ -64,6 +60,10 @@ export const router = createBrowserRouter([
         {
           path: 'addclass', 
           element: <AddClass></AddClass>
+        },
+        {
+          path: 'myselectedclasses', 
+          element: <MySelectedClass></MySelectedClass>
         },
         // {
         //   path:'payment',

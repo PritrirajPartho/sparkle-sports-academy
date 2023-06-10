@@ -48,7 +48,7 @@ const Dashboard = () => {
                                     <li><NavLink to="/"><FaCalendarAlt></FaCalendarAlt> Reservations</NavLink></li>
                                     <li><NavLink to="/"><FaWallet></FaWallet> Payment History</NavLink></li>
                                     <li>
-                                        <NavLink to="/dashboard/myclasses"><FaShoppingCart></FaShoppingCart>My Selected Classes</NavLink>
+                                        <NavLink to="/dashboard/myselectedclasses"><FaShoppingCart></FaShoppingCart>My Selected Classes</NavLink>
                                     </li>
                                 </>
                                }
