@@ -14,9 +14,13 @@ import MangeUsers from "../pages/MangeUsers/MangeUsers";
 import AdminRoute from './AdminRoute';
 import AddClass from "../pages/Dashboard/AddClass/AddClass";
 import MySelectedClass from "../pages/Dashboard/MySelectedClass/MySelectedClass";
+import StudentRoute from "./StudentRoute";
+import InstructorRoute from './InstructorRoute';
+import PrivateRoute from './PrivateRoute';
+import Instructors from '../pages/Instructors/Instructors'
 
 
-
+// TODO: STUDENT, ADMIN, INSTRUCTOR ROUTE SETUP
 export const router = createBrowserRouter([
     {
       path: "/",
@@ -38,6 +42,10 @@ export const router = createBrowserRouter([
         {
           path: 'login',
           element:<Login></Login>
+        },
+        {
+          path: 'instructors',
+          element: <Instructors></Instructors>
         }
       ]
     },
@@ -51,19 +59,19 @@ export const router = createBrowserRouter([
         },
         {
           path: 'myclasses', 
-          element: <MyClasses></MyClasses>
+          element: <InstructorRoute><MyClasses></MyClasses></InstructorRoute>
         },
         {
           path: 'manageusers', 
-          element: <MangeUsers></MangeUsers>
+          element: <AdminRoute><MangeUsers></MangeUsers></AdminRoute>
         },
         {
           path: 'addclass', 
-          element: <AddClass></AddClass>
+          element: <InstructorRoute><AddClass></AddClass></InstructorRoute>
         },
         {
           path: 'myselectedclasses', 
-          element: <MySelectedClass></MySelectedClass>
+          element: <StudentRoute><MySelectedClass></MySelectedClass></StudentRoute>
         },
         // {
         //   path:'payment',

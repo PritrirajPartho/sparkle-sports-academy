@@ -7,7 +7,7 @@ import useInstructor from '../hooks/useInstructor' ;
 // TODO: BAKI HOLO NAVIGATE AND PRIVATE ROUTE FIX KORA
 const InstructorRoute = ({ children }) => {
     const { user, loading } = useAuth();
-    const[[isInstructor, isInstructorLoading]] = useInstructor();
+    const[isInstructor, isInstructorLoading] = useInstructor();
     const location = useLocation();
 
     if(loading || isInstructorLoading){

@@ -13,7 +13,7 @@ const useBooked = () => {
         enabled:!!user?.email && !!localStorage.getItem("access-token"),
         queryFn: async () => {
             const res = await  axiosSecure(`/bookeds?email=${user?.email}`)
-            console.log('res from axios', res)
+            // console.log('res from axios', res)
             return res.data;
         },
     })
