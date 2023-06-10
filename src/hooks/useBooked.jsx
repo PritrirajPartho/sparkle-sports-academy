@@ -10,7 +10,7 @@ const useBooked = () => {
 
     const { refetch, data: booked = [] } = useQuery({
         queryKey: ['bookeds', user?.email],
-        enabled: !loading,
+        enabled:!!user?.email && !!localStorage.getItem("access-token"),
         queryFn: async () => {
             const res = await  axiosSecure(`/bookeds?email=${user?.email}`)
             console.log('res from axios', res)

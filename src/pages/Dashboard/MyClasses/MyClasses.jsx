@@ -1,5 +1,8 @@
 import React from "react";
 import useBooked from "../../../hooks/useBooked";
+import { Helmet } from "react-helmet";
+import { Link } from "react-router-dom";
+import { FaTrashAlt } from "react-icons/fa";
 
 const MyClasses = () => {
 // TODO: MORE WORK DATA CAN NOT FOUND
@@ -32,60 +35,59 @@ const MyClasses = () => {
   };
 
   return (
-    <section>
-      <div className="overflow-x-auto">
-        <table className="table">
-          {/* head */}
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>Food</th>
-              <th>Item Name</th>
-              <th>Price</th>
-              <th>Action</th>
-              <th>pay</th>
-            </tr>
-          </thead>
-          <tbody>
-            {/* row 1 */}
-            <tr>
-              <th>
-                <label>
-                  <input type="checkbox" className="checkbox" />
-                </label>
-              </th>
-              <td>
-                <div className="flex items-center space-x-3">
-                  <div className="avatar">
-                    <div className="mask mask-squircle w-12 h-12">
-                      <img
-                        src="/tailwind-css-component-profile-2@56w.png"
-                        alt="Avatar Tailwind CSS Component"
-                      />
-                    </div>
-                  </div>
-                  <div>
-                    <div className="font-bold">{booked.name}</div>
-                    <div className="text-sm opacity-50">{booked.name}</div>
-                  </div>
-                </div>
-              </td>
-              <td>
-                Zemlak, Daniel and Leannon
-                <br />
-                <span className="badge badge-ghost badge-sm">
-                  Desktop Support Technician
-                </span>
-              </td>
-              <td>Purple</td>
-              <th>
-                <button className="btn btn-ghost btn-xs">details</button>
-              </th>
-            </tr>
-          </tbody>
+    <div className="w-full">
+    <Helmet>
+        <title>sparkle </title>
+    </Helmet>
+    <div className="uppercase font-semibold h-[60px] flex justify-evenly items-center">
+        <h3 className="text-3xl">Total Items: </h3>
+        <h3 className="text-3xl">Total Price: ${total}</h3>
+        <Link to="/dashboard/payment">
+            <button className="btn btn-warning btn-sm">PAY</button>
+        </Link>
+    </div>
+    <div className="overflow-x-auto w-full">
+        <table className="table w-full">
+            {/* head */}
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Class</th>
+                    <th>Item Name</th>
+                    <th>Price</th>
+                    <th>Action</th>
+                    <th>pay</th>
+                </tr>
+            </thead>
+            <tbody>
+                {
+                    booked.map((item, index) => <tr
+                        key={item._id}
+                    >
+                        <td>
+                            {index + 1}
+                        </td>
+                        <td>
+                            <div className="avatar">
+                                <div className="mask mask-squircle w-12 h-12">
+                                    <img src={item.image} alt="Avatar Tailwind CSS Component" />
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            {item.name}
+                        </td>
+                        <td className="text-end">${item.price}</td>
+                        <td>
+                            <button onClick={() => handleDelete(item)} className="btn btn-ghost bg-red-600  text-white"><FaTrashAlt></FaTrashAlt></button>
+                        </td>
+                    </tr>)
+                }
+
+            </tbody>
         </table>
-      </div>
-    </section>
+    </div>
+</div>
   );
 };
 
