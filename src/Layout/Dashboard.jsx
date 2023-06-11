@@ -45,8 +45,8 @@ const Dashboard = () => {
                                 :
                                 <>
                                     <li><NavLink to="/dashboard/userhome"><FaHome></FaHome> User Home</NavLink></li>
-                                    <li><NavLink to="/"><FaCalendarAlt></FaCalendarAlt> Reservations</NavLink></li>
-                                    <li><NavLink to="/"><FaWallet></FaWallet> Payment History</NavLink></li>
+                                    <li><NavLink to="/dashboard/myenrolledclasses"><FaCalendarAlt></FaCalendarAlt>My Enrolled Classes</NavLink></li>
+                                    <li><NavLink to="/dashboard/paymenthistory"><FaWallet></FaWallet> Payment History</NavLink></li>
                                     <li>
                                         <NavLink to="/dashboard/myselectedclasses"><FaShoppingCart></FaShoppingCart>My Selected Classes</NavLink>
                                     </li>
