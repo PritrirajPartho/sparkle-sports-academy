@@ -44,7 +44,7 @@ const MangeUsers = () => {
                 Swal.fire({
                     position: 'top-end',
                     icon: 'success',
-                    title: `${user.name} is an Instructor Now!`,
+                    title: `${user?.name} is an Instructor Now!`,
                     showConfirmButton: false,
                     timer: 1500
                   })

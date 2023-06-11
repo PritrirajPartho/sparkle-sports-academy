@@ -21,6 +21,7 @@ import Instructors from '../pages/Instructors/Instructors'
 import Payment from "../pages/Dashboard/Payment/Payment";
 import MyEnrolledClasses from "../pages/Dashboard/MyEnrolledClasses/MyEnrolledClasses";
 import PaymentHistory from "../pages/Dashboard/PaymentHistory/PaymentHistory";
+import ManageClasses from "../pages/Dashboard/ManageClasses/ManageClasses";
 
 
 // TODO: STUDENT, ADMIN, INSTRUCTOR ROUTE SETUP
@@ -93,6 +94,10 @@ export const router = createBrowserRouter([
         //   path: 'adminhome',
         //   element: <AdminRoute><AdminHome></AdminHome></AdminRoute>
         // },
+        {
+          path: 'manageclasses', 
+          element: <AdminRoute><ManageClasses></ManageClasses></AdminRoute>
+        },
         // {
         //   path: 'allusers', 
         //   element: <AdminRoute><AllUsers></AllUsers></AdminRoute>
