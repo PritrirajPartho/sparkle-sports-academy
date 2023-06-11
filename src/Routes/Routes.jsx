@@ -18,6 +18,7 @@ import StudentRoute from "./StudentRoute";
 import InstructorRoute from './InstructorRoute';
 import PrivateRoute from './PrivateRoute';
 import Instructors from '../pages/Instructors/Instructors'
+import Payment from "../pages/Dashboard/Payment/Payment";
 
 
 // TODO: STUDENT, ADMIN, INSTRUCTOR ROUTE SETUP
@@ -71,12 +72,12 @@ export const router = createBrowserRouter([
         },
         {
           path: 'myselectedclasses', 
-          element: <StudentRoute><MySelectedClass></MySelectedClass></StudentRoute>
+          element: <MySelectedClass></MySelectedClass>
         },
-        // {
-        //   path:'payment',
-        //   element: <Payment></Payment>
-        // },
+        {
+          path:'payment',
+          element: <Payment></Payment>
+        },
         // // admin routes
         // {
         //   path: 'adminhome',

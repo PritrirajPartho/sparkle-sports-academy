@@ -3,10 +3,12 @@ import React, { useContext, useEffect, useState } from 'react';
 import axios from 'axios';
 import { AuthContext } from '../../providers/AuthProvider';
 import Swal from 'sweetalert2';
+import useBooked from '../../hooks/useBooked';
 
 const Classes = () => {
     const{user} = useContext(AuthContext)
     const[classes, setClasses]  =  useState([]);
+    const[booked, refetch] = useBooked();
     useEffect( () =>{
         axios.get('http://localhost:5000/classes?status=approved')
         .then(res => setClasses(res.data))
@@ -47,7 +49,7 @@ const Classes = () => {
         <div className='grid grid-cols-3 mt-16 mb-12 gap-8'>
           {
             classes.map(claass =>
-             <>
+             < >
                 <div key={claass._id}   className="card w-96 bg-base-100 shadow-xl">
                     <figure className="px-10 pt-10">
                       <img src={claass.img} alt="Shoes" className="rounded-xl" />
