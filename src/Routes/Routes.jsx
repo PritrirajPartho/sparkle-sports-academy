@@ -20,6 +20,7 @@ import Payment from "../pages/Dashboard/Payment/Payment";
 import MyEnrolledClasses from "../pages/Dashboard/MyEnrolledClasses/MyEnrolledClasses";
 import PaymentHistory from "../pages/Dashboard/PaymentHistory/PaymentHistory";
 import ManageClasses from "../pages/Dashboard/ManageClasses/ManageClasses";
+import StudentRoute from "./StudentRoute";
 
 
 // TODO: STUDENT, ADMIN, INSTRUCTOR ROUTE SETUP
@@ -57,7 +58,7 @@ export const router = createBrowserRouter([
       children: [
         {
           path: 'userhome',
-          element: <UserHome></UserHome>
+          element: <StudentRoute><UserHome></UserHome></StudentRoute>
         },
         {
           path: 'myclasses', 
@@ -73,7 +74,7 @@ export const router = createBrowserRouter([
         },
         {
           path: 'myselectedclasses', 
-          element: <MySelectedClass></MySelectedClass>
+          element: <StudentRoute><MySelectedClass></MySelectedClass></StudentRoute>
         },
         {
           path:'payment',
