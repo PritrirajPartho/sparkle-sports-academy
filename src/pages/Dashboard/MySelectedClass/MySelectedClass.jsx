@@ -47,7 +47,7 @@ const MySelectedClass = () => {
             <Helmet>
                 <title>Sparkle | My Selected Classes</title>
             </Helmet>
-            <h1 className='mb-6 mt-6 text-2xl text-primary'>Total Selected Class:{booked.length}</h1>
+            <h1 className='mb-6 mt-6 text-2xl text-primary'>Your Total Selected Class:{booked.length}</h1>
             <div className="overflow-x-auto w-full">
                 <table className="table w-full">
                     {/* head */}

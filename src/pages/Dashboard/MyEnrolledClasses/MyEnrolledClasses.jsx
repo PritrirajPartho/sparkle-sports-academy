@@ -19,6 +19,7 @@ const MyEnrolledClasses = () => {
 
     return (
         <div className="overflow-x-auto text-xl">
+        <h1 className='text-center text-3xl text-primary mb-8 mt-8'>Your Enrolled Classes</h1>
         <table className="table  w-[700px]">
             {/* head */}
             <thead>

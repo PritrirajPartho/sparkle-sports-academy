@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { Helmet } from "react-helmet";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../../providers/AuthProvider";
-import { Link, useNavigate } from "react-router-dom";
+import {  useLocation, useNavigate } from "react-router-dom";
 // import Swal from 'sweetalert2';
 import GoogleLogin from '../Shared/GoogleLogin/GoogleLogin';
 import Swal from "sweetalert2";
@@ -11,6 +11,9 @@ const SignUp = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const { createUser, updateUserProfile } = useContext(AuthContext);
     const navigate = useNavigate();
+    const location = useLocation();
+
+    const from = location.state?.from?.pathname || "/";
 
     const onSubmit = data => {
         //TODO:baki ace signup related work
@@ -44,8 +47,7 @@ const SignUp = () => {
                                         showConfirmButton: false,
                                         timer: 1500
                                     });
-                                    navigate('/');
-                                }
+                                    navigate(from, { replace: true });                                }
                             })
 
                     })

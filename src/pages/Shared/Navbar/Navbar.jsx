@@ -2,11 +2,16 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProvider";
 import useBooked from "../../../hooks/useBooked";
+import useAdmin from "../../../hooks/useAdmin";
+import useInstructor from "../../../hooks/useInstructor";
 
 const NavBar = () => {
     const[booked] = useBooked();
     const { user, logOut } = useContext(AuthContext);
-    const isAdmin = true;
+    const [isAdmin] = useAdmin();
+    const[isInstructor] = useInstructor();
+
+
     const handleLogOut = () => {
         logOut()
             .then(() => { })
@@ -27,8 +32,15 @@ const NavBar = () => {
         </li> */}
         <div className="mt-1 mr-2">
             {
-                isAdmin ? <li><Link to="/dashboard">Dashboard</Link></li> : 
-                <li><Link to="/dashboard/userhome">Dashboard</Link></li>
+                isAdmin ? <li><Link to="/dashboard/manageusers">Dashboard</Link></li> : 
+                <>
+                    {
+                        isInstructor ? 
+                        <li><Link to="/dashboard/myclasses">Dashboard</Link></li>
+                        :
+                        <li><Link to="/dashboard/myselectedclasses">Dashboard</Link></li>
+                    }
+                </>
             }
         </div>
         {

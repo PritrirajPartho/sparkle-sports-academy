@@ -89,27 +89,10 @@ export const router = createBrowserRouter([
           path:'paymenthistory',
           element: <PaymentHistory></PaymentHistory>
         },
-        // // admin routes
-        // {
-        //   path: 'adminhome',
-        //   element: <AdminRoute><AdminHome></AdminHome></AdminRoute>
-        // },
         {
           path: 'manageclasses', 
           element: <AdminRoute><ManageClasses></ManageClasses></AdminRoute>
-        },
-        // {
-        //   path: 'allusers', 
-        //   element: <AdminRoute><AllUsers></AllUsers></AdminRoute>
-        // },
-        // {
-        //   path: 'addItem',
-        //   element: <AdminRoute><AddItem></AddItem></AdminRoute>
-        // },
-        // {
-        //   path: 'manageitems',
-        //   element: <AdminRoute><ManageItems></ManageItems></AdminRoute>
-        // }
+        }
       ]
     }
   ]);

@@ -1,17 +1,21 @@
 import React, { useContext, useEffect, useState } from 'react';
 // const axios = require('axios');
 import axios from 'axios';
-import { AuthContext } from '../../providers/AuthProvider';
 import Swal from 'sweetalert2';
-import useBooked from '../../hooks/useBooked';
+import { AuthContext } from '../../../providers/AuthProvider';
+import useBooked from '../../../hooks/useBooked';
+import SectionTitle from '../../../components/SectionTitle/SectionTitle';
 
-const Classes = () => {
+const PopularClasses = () => {
     const{user} = useContext(AuthContext)
     const[classes, setClasses]  =  useState([]);
     const[booked, refetch] = useBooked();
     useEffect( () =>{
         axios.get('http://localhost:5000/classes?status=approved')
-        .then(res => setClasses(res.data.result))
+        .then(res => {
+            setClasses(res.data.outQueryResult)
+            console.log(res.data.outQueryResult)
+        })
         .catch(err =>{
             console.log(err)
         })
@@ -46,6 +50,8 @@ const Classes = () => {
     }
 
     return (
+  <section className='mb-8'>
+        <SectionTitle subHeading={'All popular classes or course is here'} heading={'Popular Classes'}></SectionTitle>
         <div className='grid grid-cols-3 mt-16 mb-12 gap-8'>
           {
             classes.map(claass =>
@@ -68,7 +74,9 @@ const Classes = () => {
             )
           }
         </div>
+  </section>
     );
 };
 
-export default Classes;
+export default PopularClasses;
+ 

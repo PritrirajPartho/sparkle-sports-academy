@@ -54,7 +54,7 @@ const MangeUsers = () => {
 
 
     return (
-        <div className="w-full   ml-60 text-center bg-slate-300">
+        <div className="w-[800px]   ml-60 text-center bg-slate-300">
             <Helmet>
                 <title>Sparkle Sports School | All users</title>
             </Helmet>

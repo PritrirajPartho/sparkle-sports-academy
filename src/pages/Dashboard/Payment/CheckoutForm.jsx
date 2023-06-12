@@ -104,7 +104,7 @@ const CheckoutForm = ({price, item}) => {
 // w-[800px] grid grid-cols-2 border border-red-400
     return (
       <>
-          <form className="w-[800px] grid grid-cols-1 ms-24 mt-0 mb-16" onSubmit={handleSubmit}>
+          <form className="w-[500px] grid grid-cols-1 ms-24 mt-0 mb-16" onSubmit={handleSubmit}>
               <CardElement
                   options={{
                       style: {

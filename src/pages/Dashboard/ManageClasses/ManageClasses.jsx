@@ -2,6 +2,21 @@ import React, { useState } from 'react';
 import useAxiosSecure from '../../../hooks/useAxiosSecure';
 import { useQuery } from '@tanstack/react-query';
 import Swal from 'sweetalert2';
+import Modal from 'react-modal';
+
+
+const customStyles = {
+    content: {
+      top: '50%',
+      left: '50%',
+      right: 'auto',
+      bottom: 'auto',
+      marginRight: '-50%',
+      transform: 'translate(-50%, -50%)',
+    },
+  };
+
+
 
 const ManageClasses = () => {
     const[disable, setDisable] = useState(true)
@@ -52,8 +67,40 @@ const ManageClasses = () => {
         })
     }
 
-    const showModal = modal =>{
-      console.log(modal)
+
+    const handleFeedback = (claass, event) =>{
+        // fetch(`http://localhost:5000/classes/feedback/${claass._id}`, {
+        //     method: 'PATCH',
+
+        // })
+        const value = event;
+        console.log(value)
+        axiosSecure.patch(`http://localhost:5000/classes/feedback/${claass._id}`, )
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+            if(data.modifiedCount){
+                refetch();
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: `Feedback add Successfully`,
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
+            }
+        })
+    }
+
+//---------------------------------------
+    const [modalIsOpen, setIsOpen] = useState(false);
+
+    function openModal() {
+    setIsOpen(true);
+    }
+
+    function closeModal() {
+    setIsOpen(false);
     }
 
     return (
@@ -93,19 +140,22 @@ const ManageClasses = () => {
                             <td>
                                 <button onClick={() =>  handleDeny(claass)} className="btn btn-sm  text-sm bg-orange-600  text-white">Deny</button>
                             </td> 
-                            <td>
-                                {/* Open the modal using ID.showModal() method */}
-                                    <button className="btn btn-sm text-sm  bg-primary  text-white" onClick={()=>window.my_modal_1.showModal()}>open modal</button>
-                                    <dialog id="my_modal_1" className="modal">
-                                    <form method="dialog" className="modal-box">
-                                        <h3 className="font-bold text-lg">Hello!</h3>
-                                        <p className="py-4">Press ESC key or click the button below to close</p>
-                                        <div className="modal-action">
-                                        {/* if there is a button in form, it will close the modal */}
-                                        <button className="btn">Close</button>
-                                        </div>
-                                    </form>
-                                    </dialog>
+                             <td>
+                             <div className='w-full'>
+                                    <button onClick={openModal} className='btn btn-primary'>Feedback</button>
+                                    <Modal
+                                        isOpen={modalIsOpen}
+                                        onRequestClose={closeModal}
+                                        style={customStyles}
+                                        contentLabel="Example Modal"
+                                    >   <button className='text-2xl font-bold mb-2 bg-red-500 px-4 rounded' onClick={closeModal}>X</button>
+                                        <div className='mb-3'>Give FeedBack as a admin</div>
+                                        <form onSubmit={ handleFeedback}>
+                                            <textarea placeholder="Bio" name='feedback' className="textarea textarea-bordered textarea-lg w-full max-w-xs" ></textarea>
+                                            <button className='btn btn-primary mt-2'>Submit</button>
+                                        </form>
+                                    </Modal>
+                                    </div>
                              </td>
                         </tr>)
                     }              
