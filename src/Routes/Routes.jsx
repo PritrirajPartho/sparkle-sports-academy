@@ -14,9 +14,7 @@ import MangeUsers from "../pages/MangeUsers/MangeUsers";
 import AdminRoute from './AdminRoute';
 import AddClass from "../pages/Dashboard/AddClass/AddClass";
 import MySelectedClass from "../pages/Dashboard/MySelectedClass/MySelectedClass";
-import StudentRoute from "./StudentRoute";
 import InstructorRoute from './InstructorRoute';
-import PrivateRoute from './PrivateRoute';
 import Instructors from '../pages/Instructors/Instructors'
 import Payment from "../pages/Dashboard/Payment/Payment";
 import MyEnrolledClasses from "../pages/Dashboard/MyEnrolledClasses/MyEnrolledClasses";

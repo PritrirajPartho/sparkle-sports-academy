@@ -4,11 +4,14 @@ import axios from 'axios';
 import { AuthContext } from '../../providers/AuthProvider';
 import Swal from 'sweetalert2';
 import useBooked from '../../hooks/useBooked';
+import useAxiosSecure from '../../hooks/useAxiosSecure';
 
 const Classes = () => {
     const{user} = useContext(AuthContext)
     const[classes, setClasses]  =  useState([]);
     const[booked, refetch] = useBooked();
+    const[axiosSecure] = useAxiosSecure();
+
     useEffect( () =>{
         axios.get('http://localhost:5000/classes?status=approved')
         .then(res => setClasses(res.data.result))

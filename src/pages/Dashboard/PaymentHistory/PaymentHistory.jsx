@@ -13,6 +13,7 @@ const PaymentHistory = () => {
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
+        setPayments(data)
         console.log(data)
       });
   }, [asc]);

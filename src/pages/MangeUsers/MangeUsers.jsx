@@ -5,10 +5,12 @@ import { FaChalkboardTeacher, FaUserShield } from 'react-icons/fa';
 import Swal from 'sweetalert2';
 import useAxiosSecure from '../../hooks/useAxiosSecure';
 
+
 const MangeUsers = () => {
     const [axiosSecure] = useAxiosSecure();
-    const { data: users = [], refetch } = useQuery(['users'], async () => {
-        const res = await axiosSecure.get('/users')
+    const { data: users = [], refetch } = useQuery(['allusers'], async () => {
+        const res = await axiosSecure.get('/allusers')
+        console.log({res})
         return res.data;
     })
 
