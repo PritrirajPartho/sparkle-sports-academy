@@ -52,7 +52,7 @@ const PopularClasses = () => {
     return (
   <section className='mb-8'>
         <SectionTitle subHeading={'All popular classes or course is here'} heading={'Popular Classes'}></SectionTitle>
-        <div className='grid grid-cols-3 mt-16 mb-12 gap-8'>
+        <div className='grid grid-cols-3 sm:grid-cols-3  mt-16 mb-12 gap-8'>
           {
             classes.map(claass =>
              < >

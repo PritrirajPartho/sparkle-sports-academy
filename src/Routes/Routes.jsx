@@ -52,7 +52,7 @@ export const router = createBrowserRouter([
           element: <Instructors></Instructors>
         },
         {
-          path: '/updateclass', 
+          path: 'updateclass', 
           element: <Updateclass></Updateclass>
         }
       ]

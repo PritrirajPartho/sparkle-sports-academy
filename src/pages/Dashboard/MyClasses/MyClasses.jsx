@@ -46,10 +46,8 @@ const MyClasses = () => {
                         <td>
                            <button className="btn bg-blue-500">Feedback</button>
                         </td>
-                        <td>
-                            <Link to={'/updateclass'}>
-                               <button className="btn bg-lime-600">Update</button>
-                            </Link>
+                        <td>   
+                               <button className="btn bg-lime-600"><Link to={'/updateclass'} state={item}>Update</Link></button>    
                         </td>
                     </tr>)
                 }
