@@ -28,7 +28,7 @@ const ManageClasses = () => {
     // console.log(classes);
     
     const handleApprove = claass =>{
-        fetch(`http://localhost:5000/classes/approve/${claass._id}`, {
+        fetch(`https://summer-camp-server-beta.vercel.app/classes/approve/${claass._id}`, {
             method: 'PATCH'
         })
         .then(res => res.json())
@@ -48,7 +48,7 @@ const ManageClasses = () => {
     }
 
     const handleDeny = claass => {
-        fetch(`http://localhost:5000/classes/deny/${claass._id}`, {
+        fetch(`https://summer-camp-server-beta.vercel.app/classes/deny/${claass._id}`, {
             method: 'PATCH'
         })
         .then(res => res.json())
@@ -69,13 +69,13 @@ const ManageClasses = () => {
 
 
     const handleFeedback = (claass, event) =>{
-        // fetch(`http://localhost:5000/classes/feedback/${claass._id}`, {
+        // fetch(`https://summer-camp-server-beta.vercel.app/classes/feedback/${claass._id}`, {
         //     method: 'PATCH',
 
         // })
         const value = event;
         console.log(value)
-        axiosSecure.patch(`http://localhost:5000/classes/feedback/${claass._id}`, )
+        axiosSecure.patch(`https://summer-camp-server-beta.vercel.app/classes/feedback/${claass._id}`, )
         .then(res => res.json())
         .then(data => {
             console.log(data)

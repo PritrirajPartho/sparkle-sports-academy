@@ -9,7 +9,7 @@ const Instructors = () => {
     // console.log(instructors)
 
     useEffect(() =>{
-        axiosSecure.get('http://localhost:5000/instructors')
+        axiosSecure.get('https://summer-camp-server-beta.vercel.app/instructors')
         .then(data =>{
             setInstructors(data.data)
         })

@@ -8,7 +8,7 @@ const PaymentHistory = () => {
   console.log(payments);
   // sorting system
 
-  const url = `http://localhost:5000/payments?email=${user?.email}&sort=${asc ? "asc" : "dsc"}`;
+  const url = `https://summer-camp-server-beta.vercel.app/payments?email=${user?.email}&sort=${asc ? "asc" : "dsc"}`;
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())

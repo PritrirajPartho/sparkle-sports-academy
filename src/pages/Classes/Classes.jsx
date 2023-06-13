@@ -13,7 +13,7 @@ const Classes = () => {
     const[axiosSecure] = useAxiosSecure();
 
     useEffect( () =>{
-        axios.get('http://localhost:5000/classes?status=approved')
+        axios.get('https://summer-camp-server-beta.vercel.app/classes?status=approved')
         .then(res => setClasses(res.data.result))
         .catch(err =>{
             console.log(err)
@@ -25,7 +25,7 @@ const Classes = () => {
     const handleAddToCart = claass => {
       if(user && user.email){
           const bookedItem = {itemId: claass._id, name: claass.name, img: claass.img, price: claass.price, email: user.email}
-          fetch('http://localhost:5000/bookeds', {
+          fetch('https://summer-camp-server-beta.vercel.app/bookeds', {
               method: 'POST',
               headers: {
                   'content-type': 'application/json'

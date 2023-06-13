@@ -9,7 +9,7 @@ const PopularInstructor = () => {
     // console.log(instructors)
 
     useEffect(() =>{
-        axiosSecure.get('http://localhost:5000/instructors')
+        axiosSecure.get('https://summer-camp-server-beta.vercel.app/instructors')
         .then(data =>{
             setInstructors(data.data)
         })
@@ -23,7 +23,7 @@ const PopularInstructor = () => {
            {
               instructors.map(instructor =>
               <>
-                <div key={instructor._id} className="card w-96 bg-base-100 shadow-xl">
+                <div key={instructor.id} className="card w-96 bg-base-100 shadow-xl">
                     <figure><img src={instructor.img} alt="Shoes" /></figure>
                     <div className="card-body">
                         <h2 className="card-title"><span className='mr-2'>Name:</span>{instructor.name}</h2>

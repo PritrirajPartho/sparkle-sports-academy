@@ -21,8 +21,8 @@ const AddClass = () => {
             img: photo, 
             instructor: instructor,
             email: email, 
-            price: price,
-            seat: seat,
+            price: parseFloat(price),
+            seat: parseInt(seat),
             status: "pending"
         }
         // =============================================================

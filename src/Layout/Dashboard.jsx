@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaBook, FaCalendarAlt, FaElementor, FaHome, FaShoppingCart, FaUserAlt, FaUsers, FaUtensils, FaWallet } from 'react-icons/fa';
+import { FaAddressCard, FaAdjust, FaAdn, FaBook, FaBookReader, FaBox, FaCalendarAlt, FaElementor, FaHome, FaShoppingCart, FaUserAlt, FaUsers, FaUtensils, FaWallet } from 'react-icons/fa';
 import { NavLink, Outlet } from 'react-router-dom';
 import useAdmin from '../hooks/useAdmin';
 import useInstructor from '../hooks/useInstructor';
@@ -24,11 +24,9 @@ const Dashboard = () => {
 
                     {
                             isAdmin ? <>
-                                <li><NavLink to="/dashboard/adminhome"><FaHome></FaHome> Admin Home</NavLink></li>
-                                <li><NavLink to="/dashboard/manageclasses"><FaWallet></FaWallet> Manage Classes</NavLink></li>
-                                <li><NavLink to="/"><FaBook></FaBook> Manage Bookings</NavLink></li>
-                                <li><NavLink to="/dashboard/manageusers"><FaUsers></FaUsers> Manage Users</NavLink></li>
-                                
+                                <li><NavLink to="/"><FaHome></FaHome> Admin Home</NavLink></li>
+                                <li><NavLink to="/dashboard/manageclasses"><FaAddressCard></FaAddressCard> Manage Classes</NavLink></li>
+                                <li><NavLink to="/dashboard/manageusers"><FaUsers></FaUsers> Manage Users</NavLink></li>            
                             </>
                              : 
                              <>
@@ -36,15 +34,14 @@ const Dashboard = () => {
                                 isInstructor?
                                 <>
                                     <li><NavLink to="/instructors"><FaHome></FaHome> Instructor Home</NavLink></li>
-                                    <li><NavLink to="/dashboard/addclass"> <FaBook></FaBook> Add A Class</NavLink></li>
-                                    <li><NavLink to="/dashboard/manageitems"><FaWallet></FaWallet> Manage Items</NavLink></li>
-                                    <li><NavLink to="/"><FaBook></FaBook> Manage Class By Ins</NavLink></li>
-                                    <li><NavLink to="/dashboard/myclasses"><FaUsers></FaUsers>My Classes</NavLink></li>
+                                    <li><NavLink to="/dashboard/addclass"> <FaAdn></FaAdn> Add A Class</NavLink></li>
+                                    <li><NavLink to="/"><FaBook></FaBook> Manage Class</NavLink></li>
+                                    <li><NavLink to="/dashboard/myclasses"> <FaBox></FaBox> My Classes</NavLink></li>
                                 </>
                                 :
                                 <>
                                     <li><NavLink to="/dashboard/userhome"><FaHome></FaHome> User Home</NavLink></li>
-                                    <li><NavLink to="/dashboard/myenrolledclasses"><FaCalendarAlt></FaCalendarAlt>My Enrolled Classes</NavLink></li>
+                                    <li><NavLink to="/dashboard/myenrolledclasses"><FaBookReader></FaBookReader> My Enrolled Classes</NavLink></li>
                                     <li><NavLink to="/dashboard/paymenthistory"><FaWallet></FaWallet> Payment History</NavLink></li>
                                     <li>
                                         <NavLink to="/dashboard/myselectedclasses"><FaShoppingCart></FaShoppingCart>My Selected Classes</NavLink>

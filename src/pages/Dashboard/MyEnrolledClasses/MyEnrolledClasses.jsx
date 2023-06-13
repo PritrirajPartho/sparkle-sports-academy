@@ -10,7 +10,7 @@ const MyEnrolledClasses = () => {
     console.log(enrolledClasses)
 
     useEffect(() =>{
-        axios.get(`http://localhost:5000/payments?email=${user?.email}`)
+        axios.get(`https://summer-camp-server-beta.vercel.app/payments?email=${user?.email}`)
         .then(data =>{
             setEnrolledClasses(data.data)
         })
