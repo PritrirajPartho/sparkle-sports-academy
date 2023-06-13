@@ -18,7 +18,7 @@ const Footer = () => {
                     <a className="link link-hover">Contact</a> 
                     <a className="link link-hover">Jobs</a> 
                     <a className="link link-hover">Dhaka, Bangladesh</a>
-                    <h1 className='mt-6 text-xl'> Already reserved © Sparkle Sports School</h1>
+                    <h1 className='mt-6 text-xl'> Already reserved © Sparkle Sports Academy</h1>
                 </div> 
                  <div>
                     <span className="footer-title  text-white">Social</span> 

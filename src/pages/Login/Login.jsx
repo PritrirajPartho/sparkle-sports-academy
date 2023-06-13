@@ -38,7 +38,7 @@ const Login = () => {
     return (
         <>
             <Helmet>
-                <title>Sparkle Sports School | Login</title>
+                <title>Sparkle Sports Academy | Login</title>
             </Helmet>
             <div className="hero min-h-screen mb-6">
                 <div className="hero-content flex flex-col">

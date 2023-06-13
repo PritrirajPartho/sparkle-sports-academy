@@ -19,7 +19,7 @@ const PopularInstructor = () => {
     return (
   <section className='mt-10'>
         <SectionTitle subHeading={'All our hero instructors---'} heading={'Popular Instructors'}></SectionTitle>
-        <section className='grid grid-cols-3 gap-4 my-12 mx-8'>
+        <section className='grid sm:grid-cols-1 sm:mr-2 lg:grid-cols-3 gap-4 my-12 mx-8'>
            {
               instructors.map(instructor =>
               <>

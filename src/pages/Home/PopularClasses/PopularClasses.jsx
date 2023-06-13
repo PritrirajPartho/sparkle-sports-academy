@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 // const axios = require('axios');
 import axios from 'axios';
 import Swal from 'sweetalert2';
+import { useSpring, animated } from '@react-spring/web'
 import { AuthContext } from '../../../providers/AuthProvider';
 import useBooked from '../../../hooks/useBooked';
 import SectionTitle from '../../../components/SectionTitle/SectionTitle';
@@ -49,10 +50,16 @@ const PopularClasses = () => {
       }
     }
 
+
+    const springs = useSpring({
+      from: { x: 0 },
+      to: { x: 100 },
+    })
+
     return (
   <section className='mb-8'>
         <SectionTitle subHeading={'All popular classes or course is here'} heading={'Popular Classes'}></SectionTitle>
-        <div className='grid grid-cols-3 sm:grid-cols-3  mt-16 mb-12 gap-8'>
+        <div className='grid sm:grid-cols-1 sm:mr-2 lg:grid-cols-3 gap-8 mb-12 '>
           {
             classes.map(claass =>
              < >

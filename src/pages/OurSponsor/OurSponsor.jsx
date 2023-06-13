@@ -9,15 +9,15 @@ import img6 from '../../../public/com/ikea.webp';
 
 const OurSponsor = () => {
     return (
-        <div className='mb-16'>
+        <div className='ms-3 mb-16'>
             <SectionTitle heading={'Our Valuable Sponsor'} subHeading={'more world class company trust us.'}></SectionTitle>
-           <div className='flex lg:flex-row md:flex-row sm:flex-col justify-center mt-4'>
-                <img className='w-36 mr-6 rounded' src={img1}  /> 
-                <img className='w-36 mr-6 rounded' src={img2}  /> 
-                <img className='w-36 mr-6 rounded' src={img3}  /> 
-                <img className='w-36 mr-6 rounded' src={img4} /> 
-                <img className='w-36 mr-6 rounded' src={img5} /> 
-                <img className='w-36 mr-6 rounded' src={img6} /> 
+           <div className='grid sm:grid-cols-1 sm:gap-10 lg:grid-cols-6  justify-center mt-4'>
+                <img className='sm:mb-6 mt-4 w-36 mr-6 rounded' src={img1}  /> 
+                <img className='sm:mb-6 mt-4 w-36 mr-6 rounded' src={img2}  /> 
+                <img className='sm:mb-6 mt-4 w-36 mr-6 rounded' src={img3}  /> 
+                <img className='sm:mb-6 mt-4 w-36 mr-6 rounded' src={img4} /> 
+                <img className='sm:mb-6 mt-4 w-36 mr-6 rounded' src={img5} /> 
+                <img className='sm:mb-6 mt-4 w-36 mr-6 rounded' src={img6} /> 
            </div>
         </div>
     );

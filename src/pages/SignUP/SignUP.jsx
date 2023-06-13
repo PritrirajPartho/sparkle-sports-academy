@@ -62,7 +62,7 @@ const SignUp = () => {
     return (
         <>
             <Helmet>
-                <title>Sparkle Sports School | Sign Up</title>
+                <title>Sparkle Sports Academy | Sign Up</title>
             </Helmet>
             <div className="hero min-h-screen  mt-2 mb-6">
                 <div className="hero-content flex flex-col">
