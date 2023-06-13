@@ -68,14 +68,14 @@ const ManageClasses = () => {
     }
 
 
-    const handleFeedback = (claass, event) =>{
+    const handleFeedback = event =>{
         // fetch(`https://summer-camp-server-beta.vercel.app/classes/feedback/${claass._id}`, {
         //     method: 'PATCH',
 
         // })
         const value = event;
         console.log(value)
-        axiosSecure.patch(`https://summer-camp-server-beta.vercel.app/classes/feedback/${claass._id}`, )
+        // axiosSecure.patch(`https://summer-camp-server-beta.vercel.app/classes/feedback/${claass._id}`, )
         .then(res => res.json())
         .then(data => {
             console.log(data)
@@ -150,8 +150,8 @@ const ManageClasses = () => {
                                         contentLabel="Example Modal"
                                     >   <button className='text-2xl font-bold mb-2 bg-red-500 px-4 rounded' onClick={closeModal}>X</button>
                                         <div className='mb-3'>Give FeedBack as a admin</div>
-                                        <form onSubmit={ handleFeedback}>
-                                            <textarea placeholder="Bio" name='feedback' className="textarea textarea-bordered textarea-lg w-full max-w-xs" ></textarea>
+                                        <form onSubmit={handleFeedback}>
+                                            <textarea placeholder="Give feedback as a powerful admin" name='feedback' className="textarea textarea-bordered textarea-lg w-full max-w-xs" ></textarea>
                                             <button className='btn btn-primary mt-2'>Submit</button>
                                         </form>
                                     </Modal>
