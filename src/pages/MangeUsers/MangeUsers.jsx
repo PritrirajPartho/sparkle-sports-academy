@@ -56,15 +56,15 @@ const MangeUsers = () => {
 
 
     return (
-        <div className="w-[800px]   ml-60 text-center bg-slate-300">
+        <div className="text-center bg-slate-300">
             <Helmet>
-                <title>Sparkle Sports Academy | All users</title>
+                <title>Glossy Drawer | All users</title>
             </Helmet>
-            <h3 className="text-3xl font-semibold my-4">Total Users: {users.length}</h3>
-            <div className="overflow-x-auto">
+            <h3 className="text-3xl font-semibold">Total Users: {users.length}</h3>
+            <div className=" text-xl">
                 <table className="table  w-full">
                     {/* head */}
-                    <thead>
+                    <thead className='bg-purple-400'>
                         <tr>
                             <th>Name</th>
                             <th>Email</th>

@@ -95,7 +95,7 @@ const CheckoutForm = ({price, item}) => {
                         showConfirmButton: false,
                         timer: 1500
                       })
-                    navigate('/') 
+                    navigate('/dashboard/myselectedclasses') 
                 }
               })
         }

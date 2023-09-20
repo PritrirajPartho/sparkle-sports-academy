@@ -48,10 +48,10 @@ const MySelectedClass = () => {
                 <title>Sparkle | My Selected Classes</title>
             </Helmet>
             <h1 className='mb-6 mt-6 text-2xl text-primary'>Your Total Selected Class:{booked.length}</h1>
-            <div className="overflow-x-auto w-full">
+            <div className="overflow-x-auto w-full text-xl">
                 <table className="table w-full">
                     {/* head */}
-                    <thead>
+                    <thead className='bg-blue-500'>
                         <tr>
                             <th>Serial</th>
                             <th>Class Name</th>

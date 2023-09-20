@@ -24,7 +24,6 @@ import StudentRoute from "./StudentRoute";
 import Updateclass from "../pages/Dashboard/Updateclass/Updateclass";
 
 
-// TODO: STUDENT, ADMIN, INSTRUCTOR ROUTE SETUP
 export const router = createBrowserRouter([
     {
       path: "/",

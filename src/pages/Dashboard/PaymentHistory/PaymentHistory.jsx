@@ -23,11 +23,11 @@ const PaymentHistory = () => {
       <button className="btn btn-primary mt-5 ms-22 mb-8" onClick={() => setAsc(!asc)}>
         {asc ? "Sort By New Date" : "Sort By Old Date"}
       </button>
-      <div className="overflow-x-auto text-xl">
+      <div className="overflow-x-auto text-2xl">
         <table className="table  w-[800px]">
           {/* head */}
           <thead>
-            <tr className="bg-blue-600">
+            <tr className="bg-sky-400">
               <th className="text-center">#</th>
               <th className="text-center">Course Name</th>
               <th className="text-center">Name</th>
