@@ -46,7 +46,7 @@ const Login = () => {
                         <h1 className="text-5xl font-bold">Login now!</h1>
                         <p className="py-6">Unlimited learning opportunities for any Students. See what's new, log in for a course, and start earning skill now!</p>
                     </div>
-                    <div className="card md:w-1/2 max-w-sm shadow-2xl bg-base-100">
+                    <div className="card md:w-1/2 max-w-sm shadow-2xl bg-base-100 border-2 border-blue-100">
                         <form onSubmit={handleLogin} className="card-body">
                             <div className="form-control">
                                 <label className="label">
@@ -67,7 +67,7 @@ const Login = () => {
                                 <input className="btn btn-primary" type="submit" value="Login" />
                             </div>
                         </form>
-                        <p className='text-center mb-3'><small>New Here? <Link to="/signup">Create an account</Link> </small></p>
+                        <p className='text-center mb-3'><small>New Here? <Link to="/signup"><span className='text-red-400'>Create a Account now....</span></Link> </small></p>
                         <GoogleLogin></GoogleLogin>
                     </div>
                 </div>

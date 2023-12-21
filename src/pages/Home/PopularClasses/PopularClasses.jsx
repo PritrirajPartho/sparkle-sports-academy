@@ -58,20 +58,20 @@ const PopularClasses = () => {
 
     return (
   <section className='mb-8'>
-        <SectionTitle subHeading={'All popular classes or course is here'} heading={'Popular Classes'}></SectionTitle>
+        <SectionTitle subHeading={'All Popular Classes or Courses is here.....'} heading={'Popular Courses'}></SectionTitle>
         <div className='grid sm:grid-cols-1 sm:mr-2 lg:grid-cols-3 gap-8 mb-12 '>
           {
             classes.map(claass =>
              < >
-                <div key={claass._id}   className="card w-96 bg-base-100 shadow-xl">
+                <div key={claass._id}   className="card w-96 bg-[#f1f5f9] shadow-xl">
                     <figure className="px-10 pt-10">
                       <img src={claass.img} alt="Shoes" className="rounded-xl" />
                     </figure>
                     <div className="card-body items-center text-center">
                       <h2 className="card-title text-primary text-2xl">{claass.name}</h2>
-                      <h4><span className='mr-2'>Instructor:</span>{claass.instructor}</h4>
-                      <h4><span className='mr-2'>Available Seats:</span>{claass.seat}</h4>
-                      <h4><span className='mr-2'> Price:</span>${claass.price}</h4>
+                      <h4><span className='mr-2 font-bold'>Instructor:</span>{claass.instructor}</h4>
+                      <h4><span className='mr-2 font-bold'>Available Seats:</span>{claass.seat}</h4>
+                      <h4><span className='mr-2 font-bold'> Price:</span>${claass.price}</h4>
                       <div className="w-80">
                          <button onClick={() => handleAddToCart(claass)} className='btn btn-primary w-full'>Select</button>
                       </div>

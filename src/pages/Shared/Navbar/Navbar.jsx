@@ -19,44 +19,45 @@ const NavBar = () => {
     }
 
     const navOptions = <>
-        <div className="mt-1 flex">
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/instructors">Instructors</Link></li>
-            <li><Link to="/classes">Classes</Link></li>
-            <li><Link to="/signup">Signup</Link></li>
-        </div>
-        {/* <li>
-            <button className="btn">
-               <div className="badge badge-secondary">+{booked?.length || 0}</div>
-            </button>
-        </li> */}
-        <div className="mt-1 mr-2">
+            <div className="mt-1 flex">
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/instructors">Instructors</Link></li>
+                <li><Link to="/classes">Classes</Link></li>
+                <li><Link to="/signup">Signup</Link></li>
+            </div>
+            <div className="mt-1 mr-2">
+                {
+                    isAdmin? 
+                    <li><Link to="/dashboard/manageusers">Dashboard</Link></li> 
+                    : 
+                    <>
+                        {
+                            isInstructor ? 
+                            <li><Link to="/dashboard/myclasses">Dashboard</Link></li>
+                            :
+                                user?
+                                <li><Link to="/dashboard/userhome">Dashboard</Link></li>
+                                :
+                                ''
+                        }
+                    </>
+                }
+            </div>
             {
-                isAdmin ? <li><Link to="/dashboard/manageusers">Dashboard</Link></li> : 
+                user ?
                 <>
-                    {
-                        isInstructor ? 
-                        <li><Link to="/dashboard/myclasses">Dashboard</Link></li>
-                        :
-                        <li><Link to="/dashboard/myselectedclasses">Dashboard</Link></li>
-                    }
+                    <div className="avatar online">
+                        <div className="w-12 rounded-full">
+                            <img src={user?.photoURL} />
+                        </div>
+                    </div>
+                    <button onClick={handleLogOut} className="btn btn-ghost ms-2">LogOut</button>
+                </>
+                :
+                <>
+                    <li className="mt-1"><Link to="/login">Login</Link></li>
                 </>
             }
-        </div>
-        {
-            user ? <>
-                <div className="avatar online">
-                    <div className="w-12 rounded-full">
-                        <img src={user?.photoURL} />
-                    </div>
-                </div>
-                <button onClick={handleLogOut} className="btn btn-ghost ms-2">LogOut</button>
-             </>
-               :
-              <>
-                <li className="mt-1"><Link to="/login">Login</Link></li>
-             </>
-        }
     </>
 
     return (
@@ -67,7 +68,7 @@ const NavBar = () => {
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </label>
-                        <ul tabIndex={0} className="flex sm:flex-col md:flex lg:flex menu menu-compact dropdown-content mt-3 p-2 shadow bg-slate-400 rounded-box w-52">
+                        <ul tabIndex={0} className="sm:grid sm:grid-rows-3 menu menu-compact dropdown-content mt-3 p-2 shadow bg-slate-400 rounded-box w-[600px]">
                             {navOptions}
                         </ul>
                     </div>

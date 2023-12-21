@@ -70,7 +70,7 @@ const SignUp = () => {
                         <h1 className="text-5xl font-bold">Sign up now!</h1>
                         <p className="py-6">Unlimited learning opportunities for any Students. See what's new, sign up for a course, and start earning skill now!</p>
                     </div>
-                    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 border-2 border-blue-100">
                         <form onSubmit={handleSubmit(onSubmit)} className="card-body">
                             <div className="form-control">
                                 <label className="label">

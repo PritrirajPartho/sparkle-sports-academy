@@ -12,13 +12,13 @@ const Slider = () => {
     <section className='mt-16 mb-16'>
          <Carousel>
                 <div>
-                    <img src={img1} />
+                    <img src={img3} />
                 </div>
                 <div>
                     <img src={img2} />
                 </div>
                 <div>
-                    <img src={img3} />
+                    <img src={img1} />
                 </div>
                 <div>
                     <img src={img4} />
