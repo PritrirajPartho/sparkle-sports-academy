@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProvider";
 import useBooked from "../../../hooks/useBooked";
 import useAdmin from "../../../hooks/useAdmin";
@@ -20,23 +20,23 @@ const NavBar = () => {
 
     const navOptions = <>
             <div className="mt-1 flex">
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/instructors">Instructors</Link></li>
-                <li><Link to="/classes">Classes</Link></li>
-                <li><Link to="/signup">Signup</Link></li>
+                <li><NavLink to="/">Home</NavLink></li>
+                <li><NavLink to="/instructors">Instructors</NavLink></li>
+                <li><NavLink to="/classes">Classes</NavLink></li>
+                <li><NavLink to="/signup">Signup</NavLink></li>
             </div>
             <div className="mt-1 mr-2">
                 {
                     isAdmin? 
-                    <li><Link to="/dashboard/manageusers">Dashboard</Link></li> 
+                    <li><NavLink to="/dashboard/manageusers">Dashboard</NavLink></li> 
                     : 
                     <>
                         {
                             isInstructor ? 
-                            <li><Link to="/dashboard/myclasses">Dashboard</Link></li>
+                            <li><NavLink to="/dashboard/myclasses">Dashboard</NavLink></li>
                             :
                                 user?
-                                <li><Link to="/dashboard/userhome">Dashboard</Link></li>
+                                <li><NavLink to="/dashboard/userhome">Dashboard</NavLink></li>
                                 :
                                 ''
                         }
@@ -55,7 +55,7 @@ const NavBar = () => {
                 </>
                 :
                 <>
-                    <li className="mt-1"><Link to="/login">Login</Link></li>
+                    <li className="mt-1"><NavLink to="/login">Login</NavLink></li>
                 </>
             }
     </>

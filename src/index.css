@@ -6,3 +6,11 @@
     color: rgb(10, 226, 111);
     background-color: beige;
   }
+  a.active {
+    color: red;
+    border-bottom: 2apx solid red;
+  }
+  .navbar{
+    position: sticky;
+    top: 0;
+  }
