@@ -7,7 +7,7 @@ import ErrorPage from "../pages/Shared/ErrorPage/ErrorPage";
 import SignUp from "../pages/SignUP/SignUP";
 import Login from '../pages/Login/Login';
 import Classes from "../pages/Classes/Classes";
-import Dashboard from "../Layout/Dashboard";
+import DashboardLayout from "../Layout/DashboardLayout";
 import UserHome from "../pages/Dashboard/UserHome/UserHome";
 import MyClasses from "../pages/Dashboard/MyClasses/MyClasses";
 import MangeUsers from "../pages/MangeUsers/MangeUsers";
@@ -58,7 +58,7 @@ export const router = createBrowserRouter([
     },
     {
       path: 'dashboard',
-      element: <Dashboard></Dashboard>, 
+      element: <DashboardLayout></DashboardLayout>, 
       children: [
         {
           path: 'userhome',

@@ -6,9 +6,15 @@ import Footer from '../pages/Shared/Footer/Footer';
 const Root = () => {
     return (
         <div>
-            <NavBar></NavBar>
-            <Outlet></Outlet>
-            <Footer></Footer>
+             <div className='navbar-n'>
+               <NavBar></NavBar>
+             </div>
+             <div className='outlet-o max-w-screen-xl mx-auto'>
+                <Outlet></Outlet>
+             </div>
+             <div className='footer-f'>
+             <  Footer></Footer>
+             </div>
         </div>
     );
 };

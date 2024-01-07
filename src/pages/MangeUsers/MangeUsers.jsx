@@ -58,7 +58,7 @@ const MangeUsers = () => {
     return (
         <div className="text-center bg-slate-300">
             <Helmet>
-                <title>Glossy Drawer | All users</title>
+                <title>Sparkle Sports Academy | All users</title>
             </Helmet>
             <h3 className="text-3xl font-semibold">Total Users: {users.length}</h3>
             <div className=" text-xl">
