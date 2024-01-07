@@ -30,7 +30,7 @@ const PopularInstructor = () => {
                         <h3><span className='mr-2 font-bold'>Email:</span>{instructor.email}</h3>
                      </div>
                      <div className="card-actions justify-start ml-8 mb-6">
-                         <button className="btn btn-primary">See Classes</button>
+                         <button className="btn bg-[#4FC0D0]">See Classes</button>
                     </div>
                 </div>
               </>

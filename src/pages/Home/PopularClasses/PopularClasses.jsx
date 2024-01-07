@@ -73,7 +73,7 @@ const PopularClasses = () => {
                       <h4><span className='mr-2 font-bold'>Available Seats:</span>{claass.seat}</h4>
                       <h4><span className='mr-2 font-bold'> Price:</span>${claass.price}</h4>
                       <div className="w-80">
-                         <button onClick={() => handleAddToCart(claass)} className='btn btn-primary w-full'>Select</button>
+                         <button onClick={() => handleAddToCart(claass)} className='btn bg-[#4FC0D0] w-full'>Select</button>
                       </div>
                     </div>
                  </div>

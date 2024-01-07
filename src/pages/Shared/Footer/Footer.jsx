@@ -3,7 +3,7 @@ import {  NavLink } from 'react-router-dom';
 
 const Footer = () => {
     return (
-        <section className='p-10 bg-primary  text-white'>
+        <section className='p-10 bg-[#4FC0D0] text-dark'>
             <footer className="footer">
                 <div>
                     <span className="footer-title  text-white">Navigation</span> 
