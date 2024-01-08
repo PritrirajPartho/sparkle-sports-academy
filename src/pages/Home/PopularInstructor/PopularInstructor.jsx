@@ -17,7 +17,7 @@ const PopularInstructor = () => {
 
 
     return (
-  <section className='mt-10'>
+  <section className='mt-10 popular-instructors'>
         <SectionTitle subHeading={'All our Hero instructors.....'} heading={'Popular Instructors'}></SectionTitle>
         <section className='grid sm:grid-cols-1 sm:mr-2 lg:grid-cols-3 gap-4 my-12 mx-8'>
            {

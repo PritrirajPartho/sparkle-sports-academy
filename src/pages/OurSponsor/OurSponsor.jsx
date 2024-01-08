@@ -9,7 +9,7 @@ import img6 from '../../../public/com/ikea.webp';
 
 const OurSponsor = () => {
     return (
-        <div className='ms-3 mb-16'>
+        <div className='sponsor ms-3 mb-16'>
             <SectionTitle heading={'Our Valuable Sponsors'} subHeading={'More world best company trust us.....'}></SectionTitle>
            <div className='grid sm:grid-cols-1 sm:gap-10 lg:grid-cols-6  justify-center mt-4'>
                 <img className='sm:mb-6 mt-4 w-36 mr-6 rounded' src={img1}  /> 

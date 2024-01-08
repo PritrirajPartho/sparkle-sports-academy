@@ -2,18 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+.navbar{
+  width: 100%;
+  position: fixed;
+  top: 0px;
+}
+.slider, .sponsor{
+  position: relative;
+  z-index: -1;
+  top: 30px;
+}
+.popular-classes{
+  position: relative;
+  z-index: -1;
+}
+.popular-instructors{
+  position: relative;
+  z-index: -1;
+}
+.classes,.instructors, .signup, .login{
+  position: relative;
+  z-index: -1;
+  top: 85px;
+  margin-bottom: 125px;
+}
+
 .drawer-side a.active {
     color: rgb(10, 226, 111);
     background-color: beige;
   }
-  a.active {
-    color: red;
-    border-bottom: 2px solid red;
+  .active{
+    background-color: none;
   }
-  .navbar-n{
-    /* position: sticky;
-    top: 0; */
-    width: 100%;
+  a.active {
+    color: white;
+    border-bottom: 2px solid white;
+    background-color: none;
+    border-radius: none;
+  }
+
+  .btn:hover{
+    background-color: #A2FF86;
   }
 
   .sidebar-head {
