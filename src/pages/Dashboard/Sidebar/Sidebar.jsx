@@ -11,7 +11,7 @@ import { useState } from "react";
 import User from "./User/User";
 import useAdmin from "../../../hooks/useAdmin";
 import useInstructor from "../../../hooks/useInstructor";
-import logo from "../../../../public/favicon.jpeg"
+import logo from "../../../../public/favicon.png"
 
 
 // const isAdmin = false;
@@ -30,7 +30,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
   const [isOpen, setOpen] = useState(false);
   return (
     <aside
-      className={`bg-[#f0fdf4] absolute left-0 top-0 z-10 flex h-screen w-72 flex-col overflow-y-hidden 
+      className={`bg-[#DCF2F1] absolute left-0 top-0 z-10 flex h-screen w-72 flex-col overflow-y-hidden 
       
       dark:bg-boxDark shadow-lg duration-300 ease-linear  lg:static lg:translate-x-0 ${sidebarOpen ? "translate-x-0" : "-translate-x-full"
         }`}
@@ -40,7 +40,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
         <NavLink to="/dashboard">
           <div className="flex items-center gap-4">
             <img className="w-10" src={logo} alt="Logo" />
-            <span className="text-xl font-bold">Sparkle Sports Academy</span>
+            <span className="text-xs font-bold text-black-2">Sparkle Sports Academy</span>
           </div>
         </NavLink>
 
@@ -73,7 +73,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
       <div className="sidebar-head ">
         {/* <!-- Sidebar Menu --> */}
         <nav className="sidebar-nav">
-          <h3 className="mb-4 ml-4 text-sm font-semibold text-bodyDark2">
+          <h3 className="mb-4 ml-4 text-sm font-semibold text-black-2">
             MENU
           </h3>
           {/* <!-- Menu Group --> */}
@@ -109,7 +109,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                   {/* <!--Manage Classes --> */}
                   <li>
                     <NavLink
-                      to="/dashboard/managecourses"
+                      to="/dashboard/manageclasses"
                       className={`sidebar-menu-item ${pathname.includes("managecourses") && "bg-slate-300 dark:bg-meta-4"
                         }`}
                     >

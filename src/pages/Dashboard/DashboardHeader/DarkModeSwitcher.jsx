@@ -34,13 +34,13 @@ const DarkModeSwitcher = () => {
 
   return (
     <div>
-      <span className="cursor-pointer" onClick={handleThemeSwitch}>
+      {/* <span className="cursor-pointer" onClick={handleThemeSwitch}>
         {theme === "dark" ? (
           <BsSun className="w-6 h-6 text-[#FFEC99] duration-200 hover:text-white" />
         ) : (
           <BsMoon className="w-5 h-5 text-slate-500 duration-200 hover:text-slate-600" />
         )}
-      </span>
+      </span> */}
     </div>
   );
 };

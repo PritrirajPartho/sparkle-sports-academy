@@ -60,11 +60,11 @@ const SignUp = () => {
     };
 
     return (
-        <>
+        <section className="signup">
             <Helmet>
                 <title>Sparkle Sports Academy | Sign Up</title>
             </Helmet>
-            <div className="signup hero min-h-screen  mt-2 mb-6">
+            <div className="hero min-h-screen  mt-2 mb-6">
                 <div className="hero-content flex flex-col">
                     <div className="text-center ">
                         <h1 className="text-5xl font-bold">Sign up now!</h1>
@@ -128,7 +128,7 @@ const SignUp = () => {
                     </div>
                 </div>
             </div>
-        </>
+        </section>
     );
 };
 

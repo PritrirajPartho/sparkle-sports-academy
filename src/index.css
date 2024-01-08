@@ -18,11 +18,16 @@
   position: relative;
   z-index: -1;
 }
+/* .signup, .login{
+  position: relative;
+  z-index: -1;
+  top: 100px;
+} */
 .popular-instructors{
   position: relative;
   z-index: -1;
 }
-.classes,.instructors, .signup, .login{
+.classes,.instructors{
   position: relative;
   z-index: -1;
   top: 85px;
@@ -46,6 +51,23 @@
   .btn:hover{
     background-color: #A2FF86;
   }
+
+/*dashboard related components styling... */
+ .manageclasses{
+  padding: 10px;
+  width: 100%;
+  position: relative;
+  top: 10px;
+  z-index: -1;
+}
+.manageusers, .manageclasses{
+  padding: 20px;
+  width: 97%;
+  margin-left: 15px;
+  position: relative;
+  top: 10px;
+  z-index: -1;
+}
 
   .sidebar-head {
     @apply flex flex-col overflow-y-auto duration-300 ease-linear;

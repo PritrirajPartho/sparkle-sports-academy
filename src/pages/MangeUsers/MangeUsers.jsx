@@ -56,11 +56,11 @@ const MangeUsers = () => {
 
 
     return (
-        <div className="text-center bg-slate-300">
+        <div className="manageusers text-center bg-slate-300 rounded">
             <Helmet>
                 <title>Sparkle Sports Academy | All users</title>
             </Helmet>
-            <h3 className="text-3xl font-semibold">Total Users: {users.length}</h3>
+            <h3 className="text-3xl font-semibold mb-4">Total Users: {users.length}</h3>
             <div className=" text-xl">
                 <table className="table  w-full">
                     {/* head */}

@@ -104,10 +104,10 @@ const ManageClasses = () => {
     }
 
     return (
-       <div className="overflow-x-auto ms-32 float-right">
+       <div className="bg-slate-300 overflow-x-auto float-right manageclasses">
             <table className="table  w-full">
                 {/* head */}
-                <thead className='text-center text-xl bg-blue-600 text-white'>
+                <thead className='text-center text-xl bg-purple-400 text-white'>
                     <tr>
                         <th>Photo</th>
                         <th>Name</th>
@@ -142,7 +142,7 @@ const ManageClasses = () => {
                             </td> 
                              <td>
                              <div className='w-full'>
-                                    <button onClick={openModal} className='btn btn-primary'>Feedback</button>
+                                    <button onClick={openModal} className='btn bg-[#4FC0D0]'>Feedback</button>
                                     <Modal
                                         isOpen={modalIsOpen}
                                         onRequestClose={closeModal}
