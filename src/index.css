@@ -3,33 +3,25 @@
 @tailwind utilities;
 
 
-
 .navbar{
   width: 100%;
   position: fixed;
   top: 0px;
+  z-index: 10;
 }
 .slider, .sponsor{
   position: relative;
-  z-index: -1;
   top: 30px;
 }
-.popular-classes{
+/* .signup{
   position: relative;
-  z-index: -1;
-}
-/* .signup, .login{
-  position: relative;
-  z-index: -1;
+  z-index: -9;
   top: 100px;
+  margin-bottom: 150px;
 } */
-.popular-instructors{
-  position: relative;
-  z-index: -1;
-}
+
 .classes,.instructors{
   position: relative;
-  z-index: -1;
   top: 85px;
   margin-bottom: 125px;
 }
@@ -38,37 +30,59 @@
     color: rgb(10, 226, 111);
     background-color: beige;
   }
-  .active{
-    background-color: none;
-  }
-  a.active {
-    color: white;
+  .sidebar a.active{
+    color: black;
     border-bottom: 2px solid white;
+    font-weight: bolder;
+  }
+ .navbar a.active{
+    color: whitesmoke;
+    border-bottom: 2px solid white;
+    font-weight: bold;
+    width: 90%;
     background-color: none;
     border-radius: none;
   }
 
+
   .btn:hover{
     background-color: #A2FF86;
   }
+  .input:focus{
+    border: 2px solid #200E3A;
+  }
 
 /*dashboard related components styling... */
- .manageclasses{
-  padding: 10px;
-  width: 100%;
-  position: relative;
-  top: 10px;
-  z-index: -1;
+.dashboard-header{
+  position: fixed;
+  top: 0px;
+  z-index: 10;
 }
-.manageusers, .manageclasses{
-  padding: 20px;
+
+/* .manageusers, .manageclasses{
   width: 97%;
   margin-left: 15px;
   position: relative;
   top: 10px;
   z-index: -1;
+  border-radius: 10px;
+} */
+.addaclass{
+  position: relative;
+  top: 100px;
+}
+.updateclass{
+  position: relative;
+  top: 80px;
+  left: 90px;
+  margin-bottom: 130px;
+}
+.myclasses{
+  width: 100%;
+  padding: 0;
 }
 
+/*more dashboard tailwind short css */
   .sidebar-head {
     @apply flex flex-col overflow-y-auto duration-300 ease-linear;
   }

@@ -10,13 +10,13 @@ const MyClasses = () => {
   const total = classes.reduce((sum, item) => item.price + sum, 0);
 
   return (
-    <div className="w-full mt-6">
+    <div className="myclasses w-full mt-6">
     <Helmet>
-        <title>sparkle </title>
+        <title>Sparkle Sports Academy | Instructors Classes</title>
     </Helmet>
     <h1 className="text-center text-2xl text-primary mb-6">Total Added your Class or Course:{classes.length}</h1>
     <div className="overflow-x-auto w-full ">
-        <table className="table w-full ms-8 mr-0">
+        <table className="table w-full">
             {/* head */}
             <thead>
                 <tr className="text-xl font-bold">
@@ -34,7 +34,7 @@ const MyClasses = () => {
                     classes.map((item, index) => <tr
                         key={item._id}
                     >
-                        <td>
+                        <td className="text-center">
                             {index + 1}
                         </td>
                         <td>
@@ -44,7 +44,7 @@ const MyClasses = () => {
                         <td className="text-center">{item.seat}</td>
                         <td >{item.status}</td>
                         <td>
-                           <button className="btn bg-blue-500">Feedback</button>
+                           <button className="btn bg-[#3887BE]">Feedback</button>
                         </td>
                         <td>   
                                <button className="btn bg-lime-600"><Link to={'/updateclass'} state={item}>Update</Link></button>    

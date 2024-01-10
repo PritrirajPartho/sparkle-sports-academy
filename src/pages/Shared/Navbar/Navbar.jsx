@@ -23,7 +23,7 @@ const NavBar = () => {
                 <li><NavLink to="/">Home</NavLink></li>
                 <li><NavLink to="/instructors">Instructors</NavLink></li>
                 <li><NavLink to="/classes">Classes</NavLink></li>
-                <li><NavLink to="/signup">Signup</NavLink></li>
+                {/* <li><NavLink to="/signup">Signup</NavLink></li> */}
             </div>
             <div className="mt-1 mr-2">
                 {

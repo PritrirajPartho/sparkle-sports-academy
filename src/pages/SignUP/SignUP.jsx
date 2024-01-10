@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { Helmet } from "react-helmet";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../../providers/AuthProvider";
-import {  useLocation, useNavigate } from "react-router-dom";
+import {  Link, useLocation, useNavigate } from "react-router-dom";
 // import Swal from 'sweetalert2';
 import GoogleLogin from '../Shared/GoogleLogin/GoogleLogin';
 import Swal from "sweetalert2";
@@ -122,6 +122,7 @@ const SignUp = () => {
                             </div>
                             <div className="form-control mt-6">
                                 <input className="btn btn-primary" type="submit" value="Sign Up" />
+                                <p className="ms-2 mt-2">Already you are a user?<Link to="/login" ><span className="text-red-500">Login</span></Link></p>
                             </div>
                         </form>
                          <GoogleLogin></GoogleLogin>

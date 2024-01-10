@@ -14,29 +14,22 @@ import useInstructor from "../../../hooks/useInstructor";
 import logo from "../../../../public/favicon.png"
 
 
-// const isAdmin = false;
-// const isInstructor = true;
-
-
 const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
   const [isAdmin] = useAdmin();
   console.log(isAdmin);
   const[isInstructor] = useInstructor();
   console.log(isInstructor)
-
-
   const location = useLocation();
   const { pathname } = location;
   const [isOpen, setOpen] = useState(false);
   return (
     <aside
       className={`bg-[#DCF2F1] absolute left-0 top-0 z-10 flex h-screen w-72 flex-col overflow-y-hidden 
-      
       dark:bg-boxDark shadow-lg duration-300 ease-linear  lg:static lg:translate-x-0 ${sidebarOpen ? "translate-x-0" : "-translate-x-full"
         }`}
     >
       {/* <!-- SIDEBAR HEADER --> */}
-      <div className="flex items-center justify-between gap-2 px-6 py-6 lg:py-6 ms-6 mb-1">
+      <div className="sidebar flex items-center justify-between gap-2 px-6 py-6 lg:py-6 ms-6 mb-1">
         <NavLink to="/dashboard">
           <div className="flex items-center gap-4">
             <img className="w-10" src={logo} alt="Logo" />
@@ -72,8 +65,8 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
       </div>
       <div className="sidebar-head ">
         {/* <!-- Sidebar Menu --> */}
-        <nav className="sidebar-nav">
-          <h3 className="mb-4 ml-4 text-sm font-semibold text-black-2">
+        <nav className="sidebar sidebar-nav">
+          <h3 className="mb-4 ml-4 text-sm font-semibold text-black-2 border-b-2 border-black">
             MENU
           </h3>
           {/* <!-- Menu Group --> */}
@@ -81,7 +74,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
             <ul className="mb-6 flex flex-col gap-1.5">
               {/* <!-- Dashboard submenu All--> */}
               {
-                useAdmin ? <>
+                isAdmin ? <>
                   {/* <!-- Admin Home --> */}
                   <li>
                     <NavLink
@@ -121,34 +114,60 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                   :
                   <>
                     {
-                      useInstructor ?
+                      isInstructor?
                         <>
                           {/* <!-- My Booking --> */}
                           <li>
                             <NavLink
-                              to="/dashboard/addcourses"
+                              to="/dashboard/addaclass"
                               className={`sidebar-menu-item ${pathname.includes("calendar") &&
                                 "bg-slate-300 dark:bg-meta-4"
                                 }`}
                             >
                               <BsBuildingFillAdd className="w-5 h-5" />
-                              Add courses
+                              Add a Class
                             </NavLink>
                           </li>
                           <li>
                             <NavLink
-                              to="/dashboard/insaddcourses"
+                              to="/dashboard/myclasses"
                               className={`sidebar-menu-item ${pathname.includes("insaddcourses") &&
                                 "bg-slate-300 dark:bg-meta-4"
                                 }`}
-                            >
+                            >      
                               <GiTeacher className="w-5 h-5" />
-                              Instructor Courses
+                              Instructor Classes
                             </NavLink>
                           </li>
                         </>
                         :
                         <>
+                          {/* <!-- user home --> */}
+                          <li>
+                            <NavLink
+                              to="/dashboard/userhome"
+                              className={`sidebar-menu-item ${pathname.includes("payment") &&
+                                "bg-slate-300 dark:bg-meta-4"
+                                }`}
+                            >
+                              <MdPayment className="w-5 h-5" />
+                              User Home
+                            </NavLink>
+                          </li>
+                          {/* <!-- user Home --> */}
+                          {/* <!-- Payment History --> */}
+                          <li>
+                            <NavLink
+                              to="/dashboard/payment"
+                              className={`sidebar-menu-item ${pathname.includes("payment") &&
+                                "bg-slate-300 dark:bg-meta-4"
+                                }`}
+                            >
+                              <MdPayment className="w-5 h-5" />
+                              Payment History
+                            </NavLink>
+                          </li>
+                          {/* <!-- Payment History --> */}
                           {/* <!-- Payment History --> */}
                           <li>
                             <NavLink
@@ -182,7 +201,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
 
               {/* <!-- Others Group --> */}
               <div>
-                <h3 className="mb-4 ml-4 text-sm font-semibold text-bodyDark2">
+                <h3 className="mb-4 ml-4 text-sm font-semibold text-black-2 border-b-2 border-black">
                   OTHERS
                 </h3>
 
@@ -199,33 +218,6 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                     </NavLink>
                   </li>
                   {/* <!-- Home Item --> */}
-
-                  {/* <!-- Menu Item --> */}
-                  <li>
-                    <NavLink
-                      to="/menu"
-                      className={`sidebar-menu-item ${pathname.includes("menu") && "bg-slate-300 dark:bg-meta-4"
-                        }`}
-                    >
-                      <FaBlog className="w-5 h-5" />
-                      Blog
-                    </NavLink>
-                  </li>
-                  {/* <!-- Menu Item --> */}
-
-                  {/* <!-- Shop Item --> */}
-                  <li>
-                    <NavLink
-                      to="/canvas"
-                      className={`sidebar-menu-item ${pathname.includes("order") && "bg-slate-300 dark:bg-meta-4"
-                        }`}
-                    >
-                      <MdDraw className="w-5 h-5" />
-                      Draw
-                    </NavLink>
-                  </li>
-                  {/* <!-- Shop Item --> */}
-
                   {/* <!--Singup option --> */}
                   <li>
                     <NavLink

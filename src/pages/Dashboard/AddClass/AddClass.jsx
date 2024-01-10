@@ -2,6 +2,7 @@ import React from 'react';
 import useAuth from '../../../hooks/useAuth';
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import Swal from "sweetalert2";
+import { Helmet } from 'react-helmet';
 
 
 const AddClass = () => {
@@ -44,8 +45,11 @@ const AddClass = () => {
 
     
     return (
-        <div className='border-2 border-red-500 bg-red-200 p-8 rounded-xl '>
-            <h2 className='text-center text-purple-700  text-3xl mt-5 mb-8  border-b-2 border-black'>Add a Class</h2>
+        <div className='addaclass border-2 border-red-500 bg-red-200 p-8 rounded-xl'>
+                <Helmet>
+                    <title>Sparkle Sports Academy | Add a Class</title>
+                </Helmet>
+            <h2 className='text-center font-bold text-black-2 text-3xl mt-5 mb-8  border-b-2 border-black'>Add a Class</h2>
             <form onSubmit={handleAddClass}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
                         <div className="form-control">
@@ -86,7 +90,7 @@ const AddClass = () => {
                         </div>
                 </div>
                 <div className="form-control mt-8">
-                    <input className="btn btn-primary btn-block mb-10" type="submit" value="Add A Class" />
+                    <input className="btn bg-[#3887BE] btn-block mb-10" type="submit" value="Add A Class" />
                 </div>
             </form>
         </div>

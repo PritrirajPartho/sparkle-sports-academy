@@ -56,9 +56,9 @@ const MangeUsers = () => {
 
 
     return (
-        <div className="manageusers text-center bg-slate-300 rounded">
+        <div className="manageusers text-center bg-slate-300 rounded p-4">
             <Helmet>
-                <title>Sparkle Sports Academy | All users</title>
+                <title>Sparkle Sports Academy | Manage users</title>
             </Helmet>
             <h3 className="text-3xl font-semibold mb-4">Total Users: {users.length}</h3>
             <div className=" text-xl">

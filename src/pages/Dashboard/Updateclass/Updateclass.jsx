@@ -42,7 +42,7 @@ const Updateclass = () => {
 
     
     return (
-        <div className='w-[900px] mt-8 ms-28 mb-8 border-2 border-blue-600 rounded'>
+        <div className='updateclass w-[900px] mt-8 ms-28 mb-8 border-2 border-gray-200 rounded'>
         <h2 className='text-center text-purple-700  text-3xl mt-10 mb-6'>Update Your Class</h2>
         <form onSubmit={handleUpdate}>
             <div className="  grid grid-cols-1 md:grid-cols-1 gap-6 ms-12 mr-12">
@@ -72,7 +72,7 @@ const Updateclass = () => {
                     <input type="text" placeholder='Photo url update' name="photo" className="input input-bordered" />
             </div>
             <div className="w-[800px] form-control mt-10 mb-10 ms-12">
-                <input  className="btn btn-primary btn-block" type="submit" value="Update Class" />
+                <input  className="btn bg-[#3887BE] btn-block" type="submit" value="Update Class" />
             </div>
         </form>
     </div>
