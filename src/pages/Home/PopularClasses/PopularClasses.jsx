@@ -59,11 +59,11 @@ const PopularClasses = () => {
     return (
   <section className='mb-8 popular-classes'>
         <SectionTitle subHeading={'All Popular Classes or Courses is here.....'} heading={'Popular Courses'}></SectionTitle>
-        <div className='grid sm:grid-cols-1  lg:grid-cols-3 lg:ml-[23px] gap-8 mb-12 '>
+        <div className='flex-column items-center justify-center lg:grid-cols-3 lg:ml-[23px] gap-8 lg:mb-12'>
           {
             classes.map(claass =>
              < >
-                <div key={claass._id}   className="card w-96 bg-[#e2e8f0] shadow-xl">
+                <div key={claass._id}   className="card w-11/12 mb-8 mx-auto bg-[#e2e8f0] shadow-xl">
                     <figure className="px-10 pt-10">
                       <img src={claass.img} alt="Shoes" className="rounded-xl" />
                     </figure>

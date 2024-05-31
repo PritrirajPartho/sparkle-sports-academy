@@ -17,11 +17,11 @@ const Instructors = () => {
 
 
     return (
-        <section className='instructors grid grid-cols-3 gap-4 my-12 mx-8'>
+        <section className='flex-column items-center justify-center lg:grid-cols-3 lg:ml-[23px] gap-8 lg:mb-12 mt-32'>
            {
               instructors.map(instructor =>
               <>
-                <div className="card w-96 bg-[#e2e8f0] shadow-xl">
+                <div className="card w-11/12 mb-8 mx-auto bg-[#e2e8f0] shadow-xl">
                     <figure><img src={instructor.img} alt="Shoes" /></figure>
                     <div className="card-body">
                         <h2 className="card-title"><span className='mr-2'>Name:</span>{instructor.name}</h2>

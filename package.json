@@ -1,5 +1,5 @@
 {
-  "name": "name-of-your-project",
+  "name": "sparkle-sports-academy",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -16,7 +16,8 @@
     "@tanstack/react-query": "^4.29.12",
     "aos": "^2.3.4",
     "axios": "^1.4.0",
-    "firebase": "^9.22.1",
+    "dotenv": "^16.4.5",
+    "firebase": "^9.23.0",
     "jsonwebtoken": "^9.0.0",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",
