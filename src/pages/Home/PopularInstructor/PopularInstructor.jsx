@@ -19,18 +19,18 @@ const PopularInstructor = () => {
     return (
   <section className='mt-10 popular-instructors'>
         <SectionTitle subHeading={'All our Hero instructors.....'} heading={'Popular Instructors'}></SectionTitle>
-        <section className='flex-column items-center justify-center lg:grid-cols-3 lg:ml-[23px] gap-8 lg:mb-12'>
+        <section className='grid grid-cols-1 sm:grid-cols-3 gap-4 w-11/12 sm:w-100 mx-auto'>
            {
               instructors.map(instructor =>
               <>
                 <div key={instructor.id} className="card w-11/12 mb-8 mx-auto bg-[#e2e8f0] shadow-xl">
-                    <figure><img src={instructor.img} alt="Shoes" /></figure>
-                    <div className="card-body">
+                    <figure className='px-10 pt-10 '><img src={instructor.img} alt="Shoes" className='rounded-xl border-2 border-[#164BF7]' /></figure>
+                    <div className="card-body mx-auto">
                         <h2 className="card-title"><span className='mr-2'>Name:</span>{instructor.name}</h2>
                         <h3><span className='mr-2 font-bold'>Email:</span>{instructor.email}</h3>
                      </div>
-                     <div className="card-actions justify-start ml-8 mb-6">
-                         <button className="btn bg-[#4FC0D0]">See Classes</button>
+                     <div className="w-80 mx-auto mb-8">
+                         <button className='btn bg-[#1692F7] w-full'>See Classes</button>
                     </div>
                 </div>
               </>

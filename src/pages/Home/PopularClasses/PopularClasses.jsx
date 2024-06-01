@@ -57,15 +57,15 @@ const PopularClasses = () => {
     })
 
     return (
-  <section className='mb-8 popular-classes'>
+  <section className='mb-8 popular-classes sm:w-[100%]'>
         <SectionTitle subHeading={'All Popular Classes or Courses is here.....'} heading={'Popular Courses'}></SectionTitle>
-        <div className='flex-column items-center justify-center lg:grid-cols-3 lg:ml-[23px] gap-8 lg:mb-12'>
+        <div className='grid grid-cols-1 sm:grid-cols-3 gap-4 w-11/12 sm:w-100 mx-auto'>
           {
             classes.map(claass =>
              < >
-                <div key={claass._id}   className="card w-11/12 mb-8 mx-auto bg-[#e2e8f0] shadow-xl">
+                <div key={claass._id}   className="card w-11/12 sm:12/12 mb-8 mx-auto bg-[#e2e8f0] shadow-xl">
                     <figure className="px-10 pt-10">
-                      <img src={claass.img} alt="Shoes" className="rounded-xl" />
+                      <img src={claass.img} alt="Shoes" className="rounded-xl border-2 border-[#164BF7]" />
                     </figure>
                     <div className="card-body items-center text-center">
                       <h2 className="card-title text-primary text-2xl">{claass.name}</h2>
@@ -73,7 +73,7 @@ const PopularClasses = () => {
                       <h4><span className='mr-2 font-bold'>Available Seats:</span>{claass.seat}</h4>
                       <h4><span className='mr-2 font-bold'> Price:</span>${claass.price}</h4>
                       <div className="w-80">
-                         <button onClick={() => handleAddToCart(claass)} className='btn bg-[#4FC0D0] w-full'>Select</button>
+                         <button onClick={() => handleAddToCart(claass)} className='btn bg-[#1692F7] w-full'>Select</button>
                       </div>
                     </div>
                  </div>

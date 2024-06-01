@@ -36,17 +36,17 @@
     font-weight: bolder;
   }
  .navbar a.active{
-    color: whitesmoke;
-    border-bottom: 2px solid white;
     font-weight: bold;
     width: 90%;
     background-color: none;
     border-radius: none;
+    box-shadow: none;
+    background: #164BF7 ;
+    border: none;
   }
 
-
   .btn:hover{
-    background-color: #A2FF86;
+    background-color: #164BF7;
   }
   .input:focus{
     border: 2px solid #200E3A;

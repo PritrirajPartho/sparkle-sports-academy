@@ -19,7 +19,7 @@ const NavBar = () => {
     }
 
     const navOptions = <>
-            <div className="mt-1 flex-column sm:flex">
+            <div className="mt-1 flex-column sm:flex sm:text-lg">
                 <li><NavLink to="/">Home</NavLink></li>
                 <li><NavLink to="/instructors">Instructors</NavLink></li>
                 <li><NavLink to="/classes">Classes</NavLink></li>
@@ -55,14 +55,14 @@ const NavBar = () => {
                 </>
                 :
                 <>
-                    <li className="mt-1"><NavLink to="/login">Login</NavLink></li>
+                    <li className="mt-1 sm:text-lg"><NavLink to="/login">Login</NavLink></li>
                 </>
             }
     </>
 
     return (
         <>
-            <div className="navbar font-bold bg-[#4FC0D0] text-dark">
+            <div className="navbar font-bold bg-[#16D9F7] text-dark">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -72,7 +72,7 @@ const NavBar = () => {
                             {navOptions}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost normal-case text-xl">Sparkle Sports Academy</a>
+                    <a className="btn btn-ghost normal-case text-3xl font-bold font-mono">Sparkle Sports Academy</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal">

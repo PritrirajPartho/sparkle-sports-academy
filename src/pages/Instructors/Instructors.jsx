@@ -17,7 +17,7 @@ const Instructors = () => {
 
 
     return (
-        <section className='flex-column items-center justify-center lg:grid-cols-3 lg:ml-[23px] gap-8 lg:mb-12 mt-32'>
+        <section className='grid grid-cols-1 sm:grid-cols-3 gap-4 w-11/12 sm:w-100 mx-auto h-full sm:mt-36 sm:mb-8'>
            {
               instructors.map(instructor =>
               <>

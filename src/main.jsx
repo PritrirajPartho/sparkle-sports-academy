@@ -19,7 +19,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <div>
         <AuthProvider>
             <QueryClientProvider client={queryClient}>
-                <div>
+                <div className='font-sans'>
                     <RouterProvider router={router} />
                 </div>
             </QueryClientProvider>

@@ -9,7 +9,7 @@ import img4 from '../../../assets/banner/banner5.jpg';
 
 const Slider = () => {
     return (
-    <section className='mt-16 mb-16 slider'>
+    <section className='w-11/12 sm:w-[90%] mx-auto mt-16 mb-16 slider'>
          <Carousel>
                 <div>
                     <img src={img3} />

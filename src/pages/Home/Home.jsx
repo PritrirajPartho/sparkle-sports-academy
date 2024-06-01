@@ -8,7 +8,7 @@ import PopularInstructor from './PopularInstructor/PopularInstructor';
 
 const Home = () => {
     return (
-        <div>
+        <div className='w-full'>
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>Sparkle Sports Academy | Home</title>
