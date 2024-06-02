@@ -4,7 +4,6 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
 
 const GoogleLogin = () => {
-    //TODO: BOUT KAJ
     const { googleSignIn } = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
@@ -32,7 +31,7 @@ const GoogleLogin = () => {
     return (
         <div>
             <button onClick={handleGoogleSignIn}>
-                 <img className='rounded-xl bg-none mb-5 w-full  h-[60px] ms-8' src={gogle} alt="" />
+                 <img className='rounded-xl bg-none mb-5 w-full sm:w-[375px]  h-[70px]' src={gogle} alt="" />
             </button>
         </div>
     );

@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import Swal from 'sweetalert2'
 import GoogleLogin from '../Shared/GoogleLogin/GoogleLogin';
+import loginImg from '../../../src/assets/img/login.svg';
 
 const Login = () => {
     const { signIn } = useContext(AuthContext);
@@ -41,12 +42,17 @@ const Login = () => {
                 <title>Sparkle Sports Academy | Login</title>
             </Helmet>
             <div>
-                <div className="hero flex flex-col sm:flex sm:flex-row sm:justify-center sm:items-center h-full mt-28 mb-10">
-                    <div className="mx-auto mt-4 mb-6 text-center">
-                        <h1 className="mx-atuo mb-2 text-center text-4xl sm:text-7xl font-bold ">Login now!</h1>
-                        <p className="py-6 sm:py-2 w-8/12 sm:w-100 mx-auto text-center sm:text-xl ">Unlimited learning opportunities for any Students. See what's new, log in for a course, and start earning skill now!</p>
+                <div className="hero flex flex-col sm:flex sm:flex-row sm:justify-center sm:items-center h-full mt-28 sm:mt-32 mb-10">
+                    <div>
+                        <div>
+                            <img src={loginImg} className='w-80 mx-auto mb-8' srcset="" />
+                        </div>
+                        <div className="mx-auto mt-4 mb-6 text-center">
+                            <h1 className="mx-atuo mb-2 sm:mb-6  text-center text-3xl sm:text-5xl font-bold ">Login now</h1>
+                            <p className="py-6 sm:py-2 w-8/12 sm:w-100 mx-auto text-center sm:text-xl ">Unlimited learning opportunities for any Students. See what's new, log in for a course, and start earning skill now!</p>
+                        </div>
                     </div>
-                    <div className="card mx-auto w-11/12  md:w-1/2 shadow-2xl bg-base-100 border-2 border-blue-100 pb-4">
+                    <div className="card mx-auto w-11/12  md:w-1/2 shadow-2xl bg-base-100 border-2 border-blue-100 pb-4 sm:mr-[130px]">
                         <form onSubmit={handleLogin} className="card-body">
                             <div className="form-control">
                                 <label className="label">
@@ -68,7 +74,7 @@ const Login = () => {
                             </div>
                         </form>
                         <p className='text-center mb-3'><small>New Here? <Link to="/signup"><span className='text-red-400'>Create a Account now....</span></Link> </small></p>
-                        <div className='w-[82%]   sm:ml-0 sm:w-[399px]'><GoogleLogin></GoogleLogin></div>
+                        <div className='mx-auto'><GoogleLogin></GoogleLogin></div>
                     </div>
                 </div>
             </div>

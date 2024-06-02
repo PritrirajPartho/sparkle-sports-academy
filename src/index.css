@@ -9,9 +9,6 @@
   top: 0px;
   z-index: 10;
 }
-.navbar li{
-  /* padding: 20px 20px; */
-}
 .navbar ul li a{
   margin: auto;
 }
@@ -19,12 +16,6 @@
   position: relative;
   top: 30px;
 }
-/* .signup{
-  position: relative;
-  z-index: -9;
-  top: 100px;
-  margin-bottom: 150px;
-} */
 
 .classes,.instructors{
   position: relative;
