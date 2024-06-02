@@ -29,7 +29,7 @@ const PopularInstructor = () => {
                         <h2 className="card-title"><span className='mr-2'>Name:</span>{instructor.name}</h2>
                         <h3><span className='mr-2 font-bold'>Email:</span>{instructor.email}</h3>
                      </div>
-                     <div className="w-80 mx-auto mb-8">
+                     <div className="mx-auto mb-8 w-[264px] sm:w-80">
                          <button className='btn bg-[#1692F7] w-full'>See Classes</button>
                     </div>
                 </div>

@@ -9,6 +9,12 @@
   top: 0px;
   z-index: 10;
 }
+.navbar li{
+  /* padding: 20px 20px; */
+}
+.navbar ul li a{
+  margin: auto;
+}
 .slider, .sponsor{
   position: relative;
   top: 30px;
@@ -37,7 +43,7 @@
   }
  .navbar a.active{
     font-weight: bold;
-    width: 90%;
+    width: 100%;
     background-color: none;
     border-radius: none;
     box-shadow: none;

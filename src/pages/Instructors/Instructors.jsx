@@ -15,20 +15,19 @@ const Instructors = () => {
         })
     },[])
 
-
     return (
-        <section className='grid grid-cols-1 sm:grid-cols-3 gap-4 w-11/12 sm:w-100 mx-auto h-full sm:mt-36 sm:mb-8'>
+        <section className='grid grid-cols-1 sm:grid-cols-3 gap-4 w-11/12 sm:w-100 mx-auto h-full mt-32'>
            {
               instructors.map(instructor =>
               <>
-                <div className="card w-11/12 mb-8 mx-auto bg-[#e2e8f0] shadow-xl">
-                    <figure><img src={instructor.img} alt="Shoes" /></figure>
-                    <div className="card-body">
+                <div key={instructor.id} className="card w-11/12 mb-8 mx-auto bg-[#e2e8f0] shadow-xl">
+                    <figure className='px-10 pt-10 '><img src={instructor.img} alt="Shoes" className='rounded-xl border-2 border-[#164BF7]' /></figure>
+                    <div className="card-body mx-auto">
                         <h2 className="card-title"><span className='mr-2'>Name:</span>{instructor.name}</h2>
                         <h3><span className='mr-2 font-bold'>Email:</span>{instructor.email}</h3>
                      </div>
-                     <div className="card-actions justify-start ml-8 mb-6">
-                         <button className="btn bg-[#4FC0D0]">See Classes</button>
+                     <div className="mx-auto mb-8 w-[264px] sm:w-80">
+                         <button className='btn bg-[#1692F7] w-full'>See Classes</button>
                     </div>
                 </div>
               </>

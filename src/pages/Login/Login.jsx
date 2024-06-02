@@ -64,11 +64,11 @@ const Login = () => {
                                 </label>
                             </div>
                             <div className="form-control mt-2">
-                                <input className="btn btn-primary" type="submit" value="Login" />
+                                <input className="btn bg-[#1692F7] font-bold" type="submit" value="Login" />
                             </div>
                         </form>
                         <p className='text-center mb-3'><small>New Here? <Link to="/signup"><span className='text-red-400'>Create a Account now....</span></Link> </small></p>
-                        <div className='w-[82%]   sm:ml-0 sm:w-100'><GoogleLogin></GoogleLogin></div>
+                        <div className='w-[82%]   sm:ml-0 sm:w-[399px]'><GoogleLogin></GoogleLogin></div>
                     </div>
                 </div>
             </div>

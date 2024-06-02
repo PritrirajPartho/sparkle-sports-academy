@@ -68,11 +68,11 @@ const PopularClasses = () => {
                       <img src={claass.img} alt="Shoes" className="rounded-xl border-2 border-[#164BF7]" />
                     </figure>
                     <div className="card-body items-center text-center">
-                      <h2 className="card-title text-primary text-2xl">{claass.name}</h2>
+                      <h2 className="card-title text-[#164BF7] text-2xl">{claass.name}</h2>
                       <h4><span className='mr-2 font-bold'>Instructor:</span>{claass.instructor}</h4>
                       <h4><span className='mr-2 font-bold'>Available Seats:</span>{claass.seat}</h4>
                       <h4><span className='mr-2 font-bold'> Price:</span>${claass.price}</h4>
-                      <div className="w-80">
+                      <div className="w-full sm:w-80">
                          <button onClick={() => handleAddToCart(claass)} className='btn bg-[#1692F7] w-full'>Select</button>
                       </div>
                     </div>

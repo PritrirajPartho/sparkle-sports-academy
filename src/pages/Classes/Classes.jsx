@@ -49,28 +49,28 @@ const Classes = () => {
     }
 
     return (
-        <div className='grid grid-cols-1 sm:grid-cols-3 gap-4 w-11/12 sm:w-100 mx-auto h-full sm:mt-36 sm:mb-8'>
-          {
-            classes.map(claass =>
-             < >
-                <div key={claass._id}   className="card w-11/12 mb-8 mx-auto bg-[#e2e8f0] shadow-xl">
-                    <figure className="px-10 pt-10">
-                      <img src={claass.img} alt="Shoes" className="rounded-xl" />
-                    </figure>
-                    <div className="card-body items-center text-center">
-                      <h2 className="card-title text-primary text-2xl">{claass.name}</h2>
-                      <h4><span className='mr-2 font-bold'>Instructor:</span>{claass.instructor}</h4>
-                      <h4><span className='mr-2 font-bold'>Available Seats:</span>{claass.seat}</h4>
-                      <h4><span className='mr-2 font-bold'> Price:</span>${claass.price}</h4>
-                      <div className="w-80">
-                         <button onClick={() => handleAddToCart(claass)} className='btn bg-[#4FC0D0] w-full'>Select</button>
-                      </div>
-                    </div>
-                 </div>
-             </>
-            )
-          }
-        </div>
+      <div className='grid grid-cols-1 sm:grid-cols-3 gap-4 w-11/12 sm:w-100 mx-auto mt-32'>
+      {
+        classes.map(claass =>
+         < >
+            <div key={claass._id}   className="card w-11/12 sm:12/12 mb-8 mx-auto bg-[#e2e8f0] shadow-xl">
+                <figure className="px-10 pt-10">
+                  <img src={claass.img} alt="Shoes" className="rounded-xl border-2 border-[#164BF7]" />
+                </figure>
+                <div className="card-body items-center text-center">
+                  <h2 className="card-title text-[#164BF7] text-2xl">{claass.name}</h2>
+                  <h4><span className='mr-2 font-bold'>Instructor:</span>{claass.instructor}</h4>
+                  <h4><span className='mr-2 font-bold'>Available Seats:</span>{claass.seat}</h4>
+                  <h4><span className='mr-2 font-bold'> Price:</span>${claass.price}</h4>
+                  <div className="w-full sm:w-80">
+                     <button onClick={() => handleAddToCart(claass)} className='btn bg-[#1692F7] w-full'>Select</button>
+                  </div>
+                </div>
+             </div>
+         </>
+        )
+      }
+    </div>
     );
 };
 
