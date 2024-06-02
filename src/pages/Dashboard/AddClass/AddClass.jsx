@@ -45,13 +45,13 @@ const AddClass = () => {
 
     
     return (
-        <div className='addaclass border-2 border-red-500 bg-red-200 p-8 rounded-xl'>
+        <div className='addaclas px-8 pt-24 pb-4 w-full h-100 bg-slate-300'>
                 <Helmet>
                     <title>Sparkle Sports Academy | Add a Class</title>
                 </Helmet>
             <h2 className='text-center font-bold text-black-2 text-3xl mt-5 mb-8  border-b-2 border-black'>Add a Class</h2>
             <form onSubmit={handleAddClass}>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 ">
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Name</span>
@@ -90,7 +90,7 @@ const AddClass = () => {
                         </div>
                 </div>
                 <div className="form-control mt-8">
-                    <input className="btn bg-[#3887BE] btn-block mb-10" type="submit" value="Add A Class" />
+                    <input className="btn bg-[#1692F7] btn-block mb-10" type="submit" value="Add A Class" />
                 </div>
             </form>
         </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from "react-helmet";
-import { FaTrashAlt } from "react-icons/fa";
+import { FaBackward, FaTrashAlt } from "react-icons/fa";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
 import useBooked from '../../../hooks/useBooked';
@@ -43,47 +43,59 @@ const MySelectedClass = () => {
     }
 
     return (
-        <div className="w-full text-center">
+        <div className='bg-slate-300 w-full h-[100%] text-center px-8 pt-24'>
             <Helmet>
                 <title>Sparkle | My Selected Classes</title>
             </Helmet>
-            <h1 className='mb-6 mt-6 text-2xl text-primary'>Your Total Selected Class:{booked.length}</h1>
-            <div className="overflow-x-auto w-full text-xl">
-                <table className="table w-full">
-                    {/* head */}
-                    <thead className='bg-blue-500'>
-                        <tr>
-                            <th>Serial</th>
-                            <th>Class Name</th>
-                            <th>Price</th>
-                            <th>Action</th>
-                            <th>Pay</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {
-                            booked.map((item, index) => <tr
-                                key={item._id}
-                            >
-                                <td>
-                                    {index + 1}
-                                </td>
-                                <td>
-                                    {item.name}
-                                </td>
-                                <td>{item.price}</td>
-                                <td>
-                                    <button onClick={() => handleDelete(item)} className="btn btn-ghost bg-red-600  text-white"><FaTrashAlt></FaTrashAlt></button>
-                                </td>
-                                <td>
-                                    <Link to={'/dashboard/payment'} state={item}><button className='btn btn-success'>Pay</button></Link>
-                                </td>
-                            </tr>)
-                        }
-
-                    </tbody>
-                </table>
-            </div>
+            {
+               booked.length?
+               <>
+                <h1 className='mb-6 mt-6 text-3xl font-bold text-[#164BF7]'>Your Total Selected Class:{booked.length}</h1>
+               <div className="overflow-x-auto w-full text-xl bg-slate-300">
+                   <table className="table w-full">
+                       {/* head */}
+                       <thead className='text-center text-lg font0-bold text-black-2'>
+                           <tr>
+                               <th>Serial</th>
+                               <th>Class Name</th>
+                               <th>Price</th>
+                               <th>Action</th>
+                               <th>Pay</th>
+                           </tr>
+                       </thead>
+                       <tbody className='text-center'>
+                           {
+                               booked.map((item, index) => <tr
+                                   key={item._id}
+                               >
+                                   <td>
+                                       {index + 1}
+                                   </td>
+                                   <td>
+                                       {item.name}
+                                   </td>
+                                   <td>{item.price}</td>
+                                   <td>
+                                       <button onClick={() => handleDelete(item)} className="btn btn-ghost bg-red-600  text-white"><FaTrashAlt></FaTrashAlt></button>
+                                   </td>
+                                   <td>
+                                       <Link to={'/dashboard/payment'} state={item}><button className='btn btn-success'>Pay</button></Link>
+                                   </td>
+                               </tr>)
+                           }
+                       </tbody>
+                   </table>
+               </div>
+               </>
+               :
+               <div >
+                  <h1 className='mt-8 text-2xl text-red-500 text-center'>Please select a course</h1>
+                  <p className='text-center mt-4'>When you select a class or course. you can see more options to work.</p>
+                  <Link to={'/classes'}>
+                        <button className='btn mx-auto mt-8 border-none text-white bg-gradient-to-r from-[#164BF7] to-[#1692F7]'><FaBackward></FaBackward>See all Classes</button>
+                  </Link>
+               </div>
+            }
         </div>
     );
 };

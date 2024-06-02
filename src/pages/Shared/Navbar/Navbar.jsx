@@ -20,23 +20,23 @@ const NavBar = () => {
 
     const navOptions = <>
             <div className="mt-1 flex flex-col sm:flex sm:flex-row sm:text-lg">
-                <li className="mx-auto"><NavLink to="/">Home</NavLink></li>
-                <li className="mx-auto"><NavLink to="/instructors">Instructors</NavLink></li>
-                <li className="mx-auto"><NavLink to="/classes">Classes</NavLink></li>
+                <li className="mx-auto sm:mr-4"><NavLink to="/">Home</NavLink></li>
+                <li className="mx-auto sm:mr-4"><NavLink to="/instructors">Instructors</NavLink></li>
+                <li className="mx-auto sm:mr-4"><NavLink to="/classes">Classes</NavLink></li>
                 {/* <li><NavLink to="/signup">Signup</NavLink></li> */}
             </div>
-            <div className="mt-1 mr-2">
+            <div className="sm:mt-2 mr-2">
                 {
                     isAdmin? 
-                    <li><NavLink to="/dashboard/manageusers">Dashboard</NavLink></li> 
+                        <li className="sm:text-lg mx-auto mr-2"><NavLink to="/dashboard/manageusers">Dashboard</NavLink></li> 
                     : 
                     <>
                         {
                             isInstructor ? 
-                            <li><NavLink to="/dashboard/myclasses">Dashboard</NavLink></li>
+                            <li className="sm:text-lg mx-auto mr-2"><NavLink to="/dashboard/myclasses">Dashboard</NavLink></li>
                             :
                                 user?
-                                <li><NavLink to="/dashboard/userhome">Dashboard</NavLink></li>
+                                <li className="sm:text-lg mx-auto mr-2"><NavLink to="/dashboard/mycart">Dashboard</NavLink></li>
                                 :
                                 ''
                         }
@@ -47,15 +47,15 @@ const NavBar = () => {
                 user ?
                 <>
                     <div className="avatar online">
-                        <div className="w-12 rounded-full">
+                        <div className="w-14 rounded-full ms-6 mr-0 sm:m-0">
                             <img src={user?.photoURL} />
                         </div>
                     </div>
-                    <button onClick={handleLogOut} className="btn btn-ghost ms-2">LogOut</button>
+                    <li onClick={handleLogOut} className="custom-li sm:text-lg  font-bold ml-4 sm:mr-6 sm:mx-0 text-center sm:ml-4 mt-2 sm:mt-3 mb-2 px-2 rounded-md  hover:bg-red-500 hover:text-white">Logout</li>
                 </>
                 :
                 <>
-                    <li className="mt-1 sm:text-lg mx-auto"><NavLink to="/login">Login</NavLink></li>
+                    <li className="mt-1 sm:text-lg mx-auto text-center"><NavLink to="/login">Login</NavLink></li>
                 </>
             }
     </>

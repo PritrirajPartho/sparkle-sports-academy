@@ -1,5 +1,5 @@
 import { AiFillHome, AiFillShopping } from "react-icons/ai";
-import { FaBlog } from "react-icons/fa";
+import { FaBlog, FaUser } from "react-icons/fa";
 import { BsBuildingFillAdd, BsFillCartFill } from "react-icons/bs";
 import { GiTeacher } from "react-icons/gi";
 import { IoMdLogIn } from "react-icons/io";
@@ -24,16 +24,16 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
   const [isOpen, setOpen] = useState(false);
   return (
     <aside
-      className={`bg-[#DCF2F1] absolute left-0 top-0 z-10 flex h-screen w-72 flex-col overflow-y-hidden 
-      dark:bg-boxDark shadow-lg duration-300 ease-linear  lg:static lg:translate-x-0 ${sidebarOpen ? "translate-x-0" : "-translate-x-full"
+      className={`bg-[#1692F7] absolute left-0 top-0 z-10 flex h-screen w-72 flex-col overflow-y-hidden 
+     shadow-lg duration-300 ease-linear  lg:static lg:translate-x-0 ${sidebarOpen ? "translate-x-0" : "-translate-x-full"
         }`}
     >
       {/* <!-- SIDEBAR HEADER --> */}
       <div className="sidebar flex items-center justify-between gap-2 px-6 py-6 lg:py-6 ms-6 mb-1">
         <NavLink to="/dashboard">
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 w-100 sm:p-0">
             <img className="w-10" src={logo} alt="Logo" />
-            <span className="text-xs font-bold text-black-2">Sparkle Sports Academy</span>
+            <span className="text-xs font-bold sm:text-[14px] text-black-2 w-full sm:ml-0">Sparkle Sports Academy</span>
           </div>
         </NavLink>
 
@@ -66,7 +66,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
       <div className="sidebar-head ">
         {/* <!-- Sidebar Menu --> */}
         <nav className="sidebar sidebar-nav">
-          <h3 className="mb-4 ml-4 text-sm font-semibold text-black-2 border-b-2 border-black">
+          <h3 className="mb-4 ml-4 text-sm font-semibold text-black-2 border-b-2 border-s-black-2">
             MENU
           </h3>
           {/* <!-- Menu Group --> */}
@@ -146,44 +146,17 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                           <li>
                             <NavLink
                               to="/dashboard/userhome"
-                              className={`sidebar-menu-item ${pathname.includes("payment") &&
+                              className={`sidebar-menu-item ${pathname.includes("userhome") &&
                                 "bg-slate-300 dark:bg-meta-4"
                                 }`}
                             >
-                              <MdPayment className="w-5 h-5" />
+                              <FaUser className="w-5 h-5" />
                               User Home
                             </NavLink>
                           </li>
                           {/* <!-- user Home --> */}
-                          {/* <!-- Payment History --> */}
-                          <li>
-                            <NavLink
-                              to="/dashboard/payment"
-                              className={`sidebar-menu-item ${pathname.includes("payment") &&
-                                "bg-slate-300 dark:bg-meta-4"
-                                }`}
-                            >
-                              <MdPayment className="w-5 h-5" />
-                              Payment History
-                            </NavLink>
-                          </li>
-                          {/* <!-- Payment History --> */}
-                          {/* <!-- Payment History --> */}
-                          <li>
-                            <NavLink
-                              to="/dashboard/payment"
-                              className={`sidebar-menu-item ${pathname.includes("payment") &&
-                                "bg-slate-300 dark:bg-meta-4"
-                                }`}
-                            >
-                              <MdPayment className="w-5 h-5" />
-                              Payment History
-                            </NavLink>
-                          </li>
-                          {/* <!-- Payment History --> */}
-
                           {/* <!-- My Cart --> */}
-                          <li>
+                            <li>
                             <NavLink
                               to="/dashboard/mycart"
                               className={`sidebar-menu-item ${pathname.includes("mycart") && "bg-slate-300 dark:bg-meta-4"
@@ -194,6 +167,32 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                             </NavLink>
                           </li>
                           {/* <!-- My Cart --> */}
+                          {/* <!-- Payment History --> */}
+                          <li>
+                            <NavLink
+                              to="/dashboard/payment"
+                              className={`sidebar-menu-item ${pathname.includes("payment") &&
+                                "bg-slate-300 dark:bg-meta-4"
+                                }`}
+                            >
+                              <MdPayment className="w-5 h-5" />
+                              Payment
+                            </NavLink>
+                          </li>
+                          {/* <!-- Payment History --> */}
+                          {/* <!-- Payment History --> */}
+                          <li>
+                            <NavLink
+                              to="/dashboard/payment"
+                              className={`sidebar-menu-item ${pathname.includes("payment") &&
+                                "bg-slate-300 dark:bg-meta-4"
+                                }`}
+                            >
+                              <MdPayment className="w-5 h-5" />
+                              Payment History
+                            </NavLink>
+                          </li>
+                          {/* <!-- Payment History --> */}
                         </>
                     }
                   </>
@@ -201,7 +200,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
 
               {/* <!-- Others Group --> */}
               <div>
-                <h3 className="mb-4 ml-4 text-sm font-semibold text-black-2 border-b-2 border-black">
+                <h3 className="mb-4 ml-4 text-sm font-semibold text-black-2 border-b-2 border-black-2">
                   OTHERS
                 </h3>
 

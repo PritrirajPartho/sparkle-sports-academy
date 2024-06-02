@@ -22,6 +22,7 @@ import PaymentHistory from "../pages/Dashboard/PaymentHistory/PaymentHistory";
 import ManageClasses from "../pages/Dashboard/ManageClasses/ManageClasses";
 import StudentRoute from "./StudentRoute";
 import Updateclass from "../pages/Dashboard/Updateclass/Updateclass";
+import AdminHome from "../pages/Dashboard/AdminHome/AdminHome";
 
 
 export const router = createBrowserRouter([
@@ -61,6 +62,10 @@ export const router = createBrowserRouter([
       element: <DashboardLayout></DashboardLayout>, 
       children: [
         {
+          path: 'adminhome',
+          element: <AdminHome></AdminHome>
+        },
+        {
           path: 'userhome',
           element: <StudentRoute><UserHome></UserHome></StudentRoute>
         },
@@ -95,6 +100,10 @@ export const router = createBrowserRouter([
         {
           path: 'manageclasses', 
           element: <AdminRoute><ManageClasses></ManageClasses></AdminRoute>
+        },
+        {
+          path: 'mycart', 
+          element: <MySelectedClass></MySelectedClass>
         },
       ]
     }

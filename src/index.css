@@ -41,8 +41,23 @@
     background: #164BF7 ;
     border: none;
   }
-
-  .btn:hover{
+  .li a.active{
+    font-weight: bold;
+    width: 100%;
+    background-color: none;
+    border-radius: none;
+    box-shadow: none;
+    background: #164BF7 ;
+    border: none;
+  }
+  .custom-li{
+    font-weight: bold;
+    background-color: none;
+    border-radius: none;
+    box-shadow: none;
+    border: none;
+  }
+  .section button:hover{
     background-color: #164BF7;
   }
   .input:focus{
@@ -56,14 +71,6 @@
   z-index: 10;
 }
 
-/* .manageusers, .manageclasses{
-  width: 97%;
-  margin-left: 15px;
-  position: relative;
-  top: 10px;
-  z-index: -1;
-  border-radius: 10px;
-} */
 .addaclass{
   position: relative;
   top: 100px;
@@ -74,9 +81,8 @@
   left: 90px;
   margin-bottom: 130px;
 }
-.myclasses{
-  width: 100%;
-  padding: 0;
+.btn:hover{
+  background-color: #164BF7 ;
 }
 
 /*more dashboard tailwind short css */

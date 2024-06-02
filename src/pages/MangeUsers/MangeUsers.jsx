@@ -56,23 +56,23 @@ const MangeUsers = () => {
 
 
     return (
-        <div className="manageusers text-center bg-slate-300 rounded p-4">
+        <div className="manageusers text-center bg-slate-300 rounded px-12 py-20 w-100">
             <Helmet>
                 <title>Sparkle Sports Academy | Manage users</title>
             </Helmet>
-            <h3 className="text-3xl font-semibold mb-4">Total Users: {users.length}</h3>
+            <h3 className="text-3xl font-semibold mb-8 mt-8">Total Users: {users.length}</h3>
             <div className=" text-xl">
                 <table className="table  w-full">
                     {/* head */}
-                    <thead className='bg-purple-400'>
+                    <thead>
                         <tr>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Make Admin</th>
-                            <th>Make Instructor</th>
+                            <th className='font-bold text-lg text-center text-black-2'>Name</th>
+                            <th className='font-bold text-lg text-center text-black-2'>Email</th>
+                            <th className='font-bold text-lg text-center text-black-2'>Make Admin</th>
+                            <th className='font-bold text-lg text-center text-black-2'>Make Instructor</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody className='text-center'>
                         {
                             users.map((user, index) => <tr key={user._id}>
                                 <td>{user.name}</td>

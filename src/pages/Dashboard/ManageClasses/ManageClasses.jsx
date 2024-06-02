@@ -104,19 +104,19 @@ const ManageClasses = () => {
     }
 
     return (
-       <div className="bg-slate-300 overflow-x-auto float-right manageclasses">
-            <table className="table  w-full">
+       <div className="bg-slate-300 w-full px-12 py-20 manageclasses h-100">
+            <table className="table  w-full mt-8">
                 {/* head */}
-                <thead className='text-center text-xl bg-purple-400 text-white'>
+                <thead>
                     <tr>
-                        <th>Photo</th>
-                        <th>Name</th>
-                        <th>Instructor</th>
-                        <th>Available Seats</th>
-                        <th>Status</th>
-                        <th>Approve</th>
-                        <th>Deny</th>
-                        <th>Feedback</th>
+                        <th className='font-bold text-lg text-center text-black-2'>Photo</th>
+                        <th className='font-bold text-lg text-center text-black-2'>Name</th>
+                        <th className='font-bold text-lg text-center text-black-2'>Instructor</th>
+                        <th className='font-bold text-lg text-center text-black-2'>Available Seats</th>
+                        <th className='font-bold text-lg text-center text-black-2'>Status</th>
+                        <th className='font-bold text-lg text-center text-black-2'>Approve</th>
+                        <th className='font-bold text-lg text-center text-black-2'>Deny</th>
+                        <th className='font-bold text-lg text-center text-black-2'>Feedback</th>
                     </tr>
                 </thead>
                 <tbody className='text-center text-lg'>
@@ -135,24 +135,24 @@ const ManageClasses = () => {
                             <td>{claass.status}</td>
 
                             <td>
-                                <button onClick={() =>  handleApprove(claass)} className="btn btn-sm  text-sm bg-green-400  text-white">Approve</button> 
+                                <button onClick={() =>  handleApprove(claass)} className="btn bg-green-400  text-white border-none">Approve</button> 
                             </td>
                             <td>
-                                <button onClick={() =>  handleDeny(claass)} className="btn btn-sm  text-sm bg-orange-600  text-white">Deny</button>
+                                <button onClick={() =>  handleDeny(claass)} className="btn bg-orange-600  text-white border-none">Deny</button>
                             </td> 
                              <td>
                              <div className='w-full'>
-                                    <button onClick={openModal} className='btn bg-[#4FC0D0]'>Feedback</button>
+                                    <button onClick={openModal} className='btn bg-[#1692F7] border-none text-white'>Feedback</button>
                                     <Modal
                                         isOpen={modalIsOpen}
                                         onRequestClose={closeModal}
                                         style={customStyles}
                                         contentLabel="Example Modal"
-                                    >   <button className='text-2xl font-bold mb-2 bg-red-500 px-4 rounded' onClick={closeModal}>X</button>
+                                    >   <button className='text-2xl mb-4 bg-red-700 text-white px-4 rounded' onClick={closeModal}>X</button>
                                         <div className='mb-3'>Give FeedBack as a admin</div>
                                         <form onSubmit={handleFeedback}>
                                             <textarea placeholder="Give feedback as a powerful admin" name='feedback' className="textarea textarea-bordered textarea-lg w-full max-w-xs" ></textarea>
-                                            <button className='btn btn-primary mt-2'>Submit</button>
+                                            <button className='btn bg-[#164BF7] mt-4 text-white'>Submit</button>
                                         </form>
                                     </Modal>
                                     </div>

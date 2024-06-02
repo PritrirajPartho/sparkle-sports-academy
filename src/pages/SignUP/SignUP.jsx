@@ -60,14 +60,14 @@ const SignUp = () => {
     };
 
     return (
-        <section className="signup">
+        <section className="signup mt-20">
             <Helmet>
                 <title>Sparkle Sports Academy | Sign Up</title>
             </Helmet>
             <div className="hero min-h-screen  mt-2 mb-6">
                 <div className="hero-content flex flex-col">
                     <div className="text-center ">
-                        <h1 className="text-5xl font-bold">Sign up now!</h1>
+                        <h1 className="text-3xl sm:text-5xl font-bold">Sign up now!</h1>
                         <p className="py-6">Unlimited learning opportunities for any Students. See what's new, sign up for a course, and start earning skill now!</p>
                     </div>
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 border-2 border-blue-100">
@@ -120,12 +120,12 @@ const SignUp = () => {
                                 })} placeholder="confirm password" className="input input-bordered" />
                                 {/* { <p className="text-red-600">Password is required</p> : ''} */}
                             </div>
-                            <div className="form-control mt-6">
-                                <input className="btn btn-primary" type="submit" value="Sign Up" />
-                                <p className="ms-2 mt-2">Already you are a user?<Link to="/login" ><span className="text-red-500">Login</span></Link></p>
+                            <div className="form-control mt-3">
+                                <input className="btn bg-[#1692F7]" type="submit" value="Sign Up" />
+                                <p className="ms-2 mt-3 mb-0">Already you are a user?<Link to="/login" ><span className="text-red-500">Login</span></Link></p>
                             </div>
                         </form>
-                         <GoogleLogin></GoogleLogin>
+                        <div className='mx-auto w-[80%] sm:w-[83%] h-[60px] mb-8'><GoogleLogin></GoogleLogin></div>
                     </div>
                 </div>
             </div>

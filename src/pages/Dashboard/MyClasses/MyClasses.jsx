@@ -10,11 +10,11 @@ const MyClasses = () => {
   const total = classes.reduce((sum, item) => item.price + sum, 0);
 
   return (
-    <div className="myclasses w-full mt-6">
+    <div className="myclasses w-full bg-slate-300 px-8 text-center pt-32 pb-10">
     <Helmet>
         <title>Sparkle Sports Academy | Instructors Classes</title>
     </Helmet>
-    <h1 className="text-center text-2xl text-primary mb-6">Total Added your Class or Course:{classes.length}</h1>
+    <h1 className="text-center text-3xl text-[#164BF7] mb-6">Total Added your Classes or Courses:{classes.length}</h1>
     <div className="overflow-x-auto w-full ">
         <table className="table w-full">
             {/* head */}
@@ -44,10 +44,10 @@ const MyClasses = () => {
                         <td className="text-center">{item.seat}</td>
                         <td >{item.status}</td>
                         <td>
-                           <button className="btn bg-[#3887BE]">Feedback</button>
+                           <button className="btn border-none bg-[#1692F7]">Feedback</button>
                         </td>
                         <td>   
-                               <button className="btn bg-lime-600"><Link to={'/updateclass'} state={item}>Update</Link></button>    
+                               <button className="btn border-none bg-lime-500"><Link to={'/updateclass'} state={item}>Update</Link></button>    
                         </td>
                     </tr>)
                 }

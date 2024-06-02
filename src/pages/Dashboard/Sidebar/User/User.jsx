@@ -10,11 +10,11 @@ const User = () => {
                 <img src={user?.photoURL} />
             </div>
         </div> 
-        <div className='text-center text-primary font-mono font-bold text-xl mt-3'>
+        <div className='text-center text-black-2 font-mono font-bold text-xl mt-3'>
             <h1>{user?.displayName}</h1>
         </div>
         <div className='text-center  mt-1'>
-            <p><span className='mr-2  text-red-400'>Email:</span>{user?.email}</p>
+            <p><span className='mr-2 text-black-2'>Email:</span>{user?.email}</p>
         </div>
     </section>
     );
